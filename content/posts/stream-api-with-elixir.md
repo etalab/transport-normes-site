@@ -5,7 +5,7 @@ draft: false
 tags: ["elixir"]
 ---
 
-### The goal
+## The goal
 
 You want to fetch data from an external API with Elixir, and this API is paginated.
 
@@ -18,7 +18,7 @@ curl https://demo.data.gouv.fr/api/1/datasets/
 
 data : […]
 facets : {}
-next_page :"https://demo.data.gouv.fr/api/1/datasets/?page=2"
+next_page : "https://demo.data.gouv.fr/api/1/datasets/?page=2"
 page : 1
 page_size : 20
 previous_page : null
@@ -30,7 +30,7 @@ We notice useful informations here :
 * page_size : 20. There are 20 datasets per page
 * next_page : the url you should request to get the next results
 
-### Meet Stream.resource
+## Meet Stream.resource
 
 The stream module is made to support lazy operation and is a perfect candidate for that task. It provides a [Stream.resource]([function](https://hexdocs.pm/elixir/1.12/Stream.html#resource/3)) function. As the doc says it "emits a sequence of values for the given resource", which sounds good.
 
@@ -46,7 +46,7 @@ It can also return `{:halt, acc}` if there is nothing left to fetch on the API.
 
 3. `after_fun` will be empty here, as we don't need to close anything when we're done.
 
-### The Code
+## The Code
 
 ```elixir
 start_fun = fn -> {"https://demo.data.gouv.fr/api/1/datasets/"} end
@@ -103,7 +103,7 @@ stream_api.() |> Stream.take(50) |> Enum.to_list()
 
 The stream will make a first API call when a first dataset is needed. It will store the 20 results present in the first page and emit one. Then it will emit on demand the 19 following results. If (and only if) asked for more, it will make a new API call and repeat the process. How sweet is that ?
 
-### The generic approach
+## The generic approach
 In fact, all paginated api endpoints on data.gouv.fr follow the same pattern : the `data` key contains the data, and `next_page` contains the url to the next page. So the code we wrote is ready to query any paginated information on the API !
 
 We just need to modify `start_fun` so it can accept an url as an argument.
