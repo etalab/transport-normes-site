@@ -106,6 +106,7 @@ params:
     ShowCodeCopyButtons: true
     ShowToc: true
     comments: true
+    applause: true
     images: ["papermod-cover.png"]
 
     profileMode:
