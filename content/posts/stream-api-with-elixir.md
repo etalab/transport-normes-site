@@ -124,9 +124,7 @@ next_fun = fn {url} ->
     {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
       {:ok, content} = Jason.decode(body)
       items = content |> Map.get("data", [])
-
       {items, {Map.get(content, "next_page")}}
-
     _ ->
       {:halt, nil}
   end
