@@ -26,9 +26,9 @@ total : 39259
 ```
 
 We notice useful informations here : 
-* total : 39259. The number of datasets available (nice !)
-* page_size : 20. There are 20 datasets per page
-* next_page : the url you should request to get the next results
+* `total : 39259`. The number of datasets available (nice !)
+* `page_size : 20`. There are 20 datasets per page
+* `next_page` : the url you should request to get the next results
 
 ## Meet Stream.resource
 
