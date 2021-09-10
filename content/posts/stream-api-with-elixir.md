@@ -101,7 +101,9 @@ And use it to fetch the first 50 results of the API
 stream_api.() |> Stream.take(50) |> Enum.to_list()
 ```
 
-The stream will make a first API call when a first dataset is needed. It will store the 20 results present in the first page and emit one. Then it will emit on demand the 19 following results. If (and only if) asked for more, it will make a new API call and repeat the process. How sweet is that ?
+The stream will make a first API call when a first dataset is needed. It will store the 20 results present in the first page and emit one. Then it will emit on demand the 19 following results. If (and only if) asked for more, it will make a new API call and repeat the process. 
+
+That's not many lines of code for all that goodness !
 
 ## The generic approach
 In fact, all paginated api endpoints on data.gouv.fr follow the same pattern : the `data` key contains the data, and `next_page` contains the url to the next page. So the code we wrote is ready to query any paginated information on the API !
