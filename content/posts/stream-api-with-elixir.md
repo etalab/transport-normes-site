@@ -57,10 +57,15 @@ Next, the `next_fun`:
 
 ```elixir
 
-next_fun = fn {url} ->
+next_fun = fn
+  nil ->
+    # no url to query, we halt the stream
+    {:halt, nil}
+
+  {url} ->
     # we make a GET request on the url
     case HTTPoison.get(url) do
-        {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+      {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         # we decode the body from a string to an Elixir map
         {:ok, content} = Jason.decode(body)
         # we keep only what interests us; Here, what's in the data key
@@ -69,7 +74,7 @@ next_fun = fn {url} ->
         # we return the results, and the next url to query 
         {items, {Map.get(content, "next_page")}}
 
-        _ ->
+      _ ->
         # something went wrong with the API call, we stop the stream
         {:halt, nil}
     end
@@ -121,15 +126,21 @@ start_fun = fn url ->
   fn -> {url} end
 end
 
-next_fun = fn {url} ->
-  case HTTPoison.get(url) do
-    {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
-      {:ok, content} = Jason.decode(body)
-      items = content |> Map.get("data", [])
-      {items, {Map.get(content, "next_page")}}
-    _ ->
-      {:halt, nil}
-  end
+next_fun = fn
+  nil ->
+    {:halt, nil}
+
+  {url} ->
+    case HTTPoison.get(url) do
+      {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+        {:ok, content} = Jason.decode(body)
+        items = content |> Map.get("data", [])
+
+        {items, {Map.get(content, "next_page")}}
+
+      _ ->
+        {:halt, nil}
+    end
 end
 
 after_fun = fn _ -> nil end
@@ -149,5 +160,7 @@ datasets = stream_api.("https://demo.data.gouv.fr/api/1/datasets/") |> Stream.ta
 # fetch some discussions
 discussions = stream_api.("https://demo.data.gouv.fr/api/1/discussions/") |> Stream.take(50) |> Enum.to_list()
 ```
+
+We can now fetch any paginated data from the data.gouv API using the same simple function :tada:.
 
 Just an note : I added some `Mix.install` instructions in the snippet above, so you can just copy and paste it in an Elixir [Livebook](https://github.com/livebook-dev/livebook) and it will work.
