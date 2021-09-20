@@ -123,10 +123,9 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "Francis Chabouis"
+        Title: "Normes de TC"
         Content: >
-            I am a French full stack developper based in Bordeaux, France. I work for [Codeurs en Liberté](https://codeursenliberte.fr), a cooperative of freelance developpers 🧡 .
-            My current professional interests include Elixir, cartography and mobility (open) data.
+            Site de test, mise en ligne de normes de transport en commun.
     socialIcons:
         - name: github
           url: "https://github.com/fchabouis"
