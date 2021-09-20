@@ -1,6 +1,6 @@
-baseURL: https://francis.chabouis.fr
+baseURL: https://elegant-carson-e21034.netlify.app
 languageCode: en-us
-title: Francis Chabouis's blog
+title: Normes de TC
 theme: "PaperMod"
 
 enableInlineShortcodes: true
