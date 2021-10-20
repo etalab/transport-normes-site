@@ -130,6 +130,8 @@
 
 .post-content table {
     margin-bottom: 32px;
+    overflow: visible;
+    font-size: 13px;
 }
 
 .post-content table th,
