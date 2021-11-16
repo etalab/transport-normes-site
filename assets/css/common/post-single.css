@@ -45,20 +45,20 @@
 
 .post-content h1 {
     margin: 40px auto 32px;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .post-content h2 {
     margin: 32px auto 24px;
-    font-size: 32px;
-}
-
-.post-content h3 {
     font-size: 24px;
 }
 
-.post-content h4 {
+.post-content h3 {
     font-size: 16px;
+}
+
+.post-content h4 {
+    font-size: 14px;
 }
 
 .post-content h5 {
@@ -435,7 +435,7 @@ h6:hover .anchor {
 }
 
 body {
-    counter-reset: h1; /* Set a counter named 'section', and its initial value is 0. */
+    counter-reset: h1 figure; /* Set a counter named 'section', and its initial value is 0. */
 }
 h1 {
     counter-reset: h2;
@@ -446,6 +446,7 @@ h2 {
 h3 {
     counter-reset: h4;
 }
+
   
 .autonumbering h1::before {
     counter-increment: h1;
@@ -465,4 +466,14 @@ h3 {
 .autonumbering h4::before {
     counter-increment: h4;
     content: counter(h1) '.' counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+} */
+
+img + em {
+    display: block;
+    text-align: center;
+}
+
+.autonumbering img + em::before {
+    counter-increment: figure;
+    content: 'Figure ' counter(figure) ' : ';
 }

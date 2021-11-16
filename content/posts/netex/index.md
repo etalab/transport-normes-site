@@ -1,17 +1,14 @@
 ---
-title: "NeTEx"
+title: "Profil d’échange pour la description des horaires de transport en commun"
 date: 2021-10-19T13:21:16+00:00
 draft: false
 tags: ["NeTEx"]
 autonumbering: true
 ---
 
-
-# Profil d'échange pour la description des horaires de transport en commun
-
 **NeTEx - Profil Français pour les horaires**
 
-### <span id="__RefHeading___Toc54967863" class="anchor"></span>Avant-propos
+# <span id="__RefHeading___Toc54967863" class="anchor"></span>Avant-propos
 
 L’harmonisation des pratiques dans l’échange des données relatives aux
 offres de transport est essentielle :
@@ -55,7 +52,7 @@ données de description des horaires" (issu des travaux *NeTEx,
 Transmodel et IFOPT)* qui aujourd’hui fait consensus dans les groupes de
 normalisation (CN03/GT7 – Transport public / information voyageur).
 
-## <span id="__RefHeading___Toc54967864" class="anchor"></span>Introduction
+# <span id="__RefHeading___Toc54967864" class="anchor"></span>Introduction
 
 Le présent format d’échange est un profil de NeTEx.
 
@@ -220,7 +217,7 @@ signalés par le mot *(profil)*, en italique et entre parenthèses. Les
 définitions ci-dessus sont des traductions littérales du document
 normatif.
 
-### 1. **COUPLED JOURNEY** (COURSE COUPLÉE)
+## COUPLED JOURNEY (COURSE COUPLÉE)
 
 Un voyage complet opéré par un train couplé, composé de deux COURSES, ou
 plus, restant couplées tout au long d’un PARCOURS. Une COURSE COUPLÉE
@@ -228,15 +225,13 @@ peut être considérée comme une simple COURSE.
 
 
 
-### 1. **DATED PASSING TIME** (HEURE DE PASSAGE DATÉE)
+## DATED PASSING TIME (HEURE DE PASSAGE DATÉE)
 
 HEURE DE PASSAGE pour un JOUR D'EXPLOITATION donné. Cet objet restera
 abstrait dans le contexte de ce profil et ne sera utiliséutilisé qu’au
 travers de sa spécialisation en HEURE DE PASSAGE COMMANDÉE.
 
-3.3
-
-**DATED VEHICLE JOURNEY** (COURSE DATÉE)
+## DATED VEHICLE JOURNEY (COURSE DATÉE)
 
 Service service particulier d'un véhicule sur un jour de fonctionnement
 particulier, y compris toutes les modifications éventuellement décidées
@@ -244,36 +239,26 @@ par le personnel de contrôle. Cet objet restera abstrait dans le
 contexte de ce profil et ne sera utilisé qu’au travers de sa
 spécialisation en COURSE DATÉE NORMALE.
 
-3.4
-
-**DEAD RUN** (HAUT LE PIED)
+## DEAD RUN (HAUT LE PIED)
 
 Un service voiture haut-le-pied (non commercial).
 
-3.5
-
-**DEFAULT INTERCHANGE** (CORRESPONDANCE PAR DEFAUT)
+## DEFAULT INTERCHANGE (CORRESPONDANCE PAR DEFAUT)
 
 Paramètre définissant la durée acceptable (maximum autorisée et objectif
 de durée standard) pour une correspondance entre deux POINTS D'ARRÊT.
 
-3.6
-
-**FLEXIBLE SERVICE PROPERTIES** (PROPRIÉTÉS DE COURSE FLEXIBLE)
+## FLEXIBLE SERVICE PROPERTIES (PROPRIÉTÉS DE COURSE FLEXIBLE)
 
 Propriété supplémentaire d'un service permettant de caractériser sa
 flexibilité. Un service peut n'être que partiellement flexible.
 
-3.7
-
-**HEADWAY INTERVAL** (INTERVAL)
+## HEADWAY INTERVAL (INTERVAL)
 
 Intervalle temporel caractérisant un GROUPE DE COURSE À INTERVALLE (par
 exemple toutes les 10 minutes ou toutes les 4 à 6 minutes).
 
-3.8
-
-**HEADWAY JOURNEY GROUP** (GROUPE DE COURSES EN FRÉQUENCE)
+## HEADWAY JOURNEY GROUP (GROUPE DE COURSES EN FRÉQUENCE)
 
 Groupe de COURSEs suivant le même PARCOURS et dont les départs sont
 séparés d'un intervalle temporel fixe au sein d'un créneau horaire donné
@@ -281,77 +266,59 @@ séparés d'un intervalle temporel fixe au sein d'un créneau horaire donné
 est particulièrement utile dans le cadre de l'information voyageur. Le
 créneau horaire est exprimé par l'objet TIME BAND.
 
-3.9
-
-**INTERCHANGE** (CORRESPONDANCE DE COURSES)
+## INTERCHANGE (CORRESPONDANCE DE COURSES)
 
 Une possibilité théorique de correspondance entre courses intervenant à
 un seul POINT D'ARRÊT ou entre différents POINTs D'ARRÊT.
 
-3.10
-
-**JOURNEY FREQUENCY GROUP** (GROUPE DE COURSES EN FRÉQUENCE)
+## JOURNEY FREQUENCY GROUP (GROUPE DE COURSES EN FRÉQUENCE)
 
 Définit un groupe de COURSEs afin de leur attribuer un comportement
 particulier comme un service en fréquence ou un service cadencé (passe
 toutes les heures ..h10, ..h25 et ..h45 par exemple).
 
-3.11
-
-**JOURNEY PART** (PARTIE DE COURSE)
+## JOURNEY PART (PARTIE DE COURSE)
 
 Une partie d'une COURSE créée dans un but fonctionnel spécifique,
 notamment dans les situations lors de couplage ou de séparation de
 véhicule.
 
-3.12
-
-**JOURNEY PART COUPLE** (COUPLE DE PARTIES DE COURSE)
+## JOURNEY PART COUPLE (COUPLE DE PARTIES DE COURSE)
 
 Deux PARTIEs DE COURSEs de différentes COURSES effectuées simultanément
 par un train constitué par le couplage de plusieurs véhicules ou rames.
 
-3.13
-
-**NORMAL DATED VEHICLE JOURNEY** (COURSE DATÉE NORMALE)
+## NORMAL DATED VEHICLE JOURNEY (COURSE DATÉE NORMALE)
 
 Une COURSE DATÉE correspondant à la planification du parcours des
 véhicules.
 
-3.14
-
-**PASSING TIME** (HEURE DE PASSAGE)
+## PASSING TIME (HEURE DE PASSAGE)
 
 Données temporelles concernant le passage des véhicules de transport
 public à un POINT particulier (par exemple heure d'arrivée, heure de
 départ, temps d'attente).
 
-3.15
-
-**RHYTMHICAL JOURNEY GROUP** (GROUPE DE COURSES CADENCÉES)
+## RHYTMHICAL JOURNEY GROUP (GROUPE DE COURSES CADENCÉES)
 
 Groupe de COURSEs suivant le même PARCOURS et répétant le même rythme de
 départ toutes les heures (passe toutes les heures ..h10, ..h25 et ..h45
 par exemple) et ce dans un créneau horaire donnée. Le créneau horaire
 est exprimé par l'objet TIME BAND sur le schéma.
 
-3.16
 
-**SERVICE JOURNEY** (COURSE COMMERCIALE)
+
+## SERVICE JOURNEY (COURSE COMMERCIALE)
 
 Une COURSE transportant des passagers prévus pour un JOUR TYPE donné. Le
 déroulement est en principe défini par le PARCOURS COMMERCIAL.
 
-3.17
-
-**SERVICE JOURNEY INTERCHANGE** (CORRESPONDANCE DE COURSES COMMERCIALES)
+## SERVICE JOURNEY INTERCHANGE (CORRESPONDANCE DE COURSES COMMERCIALES)
 
 Une possibilité théorique de correspondance entre COURSEs COMMERCIALEs
 intervenant à un seul POINT D'ARRÊT ou entre différents POINTs D'ARRÊT.
 
-3.18
-
-**TARGET PASSING TIME** (HEURE DE PASSAGE COMMANDÉE)
+## TARGET PASSING TIME (HEURE DE PASSAGE COMMANDÉE)
 
 Données temporelles indiquant l'objectif à atteindre quant au passage du
 véhicule à un POINT SUR PARCOURS particulier pour une COURSE DATÉE afin
@@ -360,23 +327,17 @@ l'adaptation des HEUREs DE PASSAGE DATÉEs faite en exploitation pour
 prendre en compte les changements de condition d'exploitation en amont
 du départ du véhicule (travaux, etc.).
 
-3.19
-
-**TEMPLATE SERVICE JOURNEY** (MODÈLE DE COURCE COMMERCIALE)
+## TEMPLATE SERVICE JOURNEY (MODÈLE DE COURCE COMMERCIALE)
 
 COURSE DE RÉFÉRENCE transportant des voyageurs.
 
-3.20
-
-**TEMPLATE VEHICLE JOURNEY** (COURSE DE RÉFÉRENCE)
+## TEMPLATE VEHICLE JOURNEY (COURSE DE RÉFÉRENCE)
 
 COURSE modèle dont l'occurrence a été spécifiée au sein d'un GROUPE DE
 COURSE À INTERVALLE ou d'un GROUPE DE COURSE CADENCÉ; elle peut donc
 représenter un grand nombre de COURSEs.
 
-3.21
-
-**TIMETABLE PASSING TIME** (HEURE DE PASSAGE PLANIFIÉE)
+## TIMETABLE PASSING TIME (HEURE DE PASSAGE PLANIFIÉE)
 
 Donnée temporelle théorique relative au passage d'un véhicule de
 transport public à un POINT SUR PARCOURS donné sur une COURSE et pour un
@@ -385,23 +346,17 @@ franchissement, mais que cette heure de passage est constituée de
 l’heure de d’arrivée et de départ ainsi que d’informations associées
 (quai, marges d’erreur, etc.).
 
-3.22
-
-**TRAIN** (TRAIN)
+## TRAIN (TRAIN)
 
 Un véhicule composé d'ÉLÉMENTs DE TRAIN dans un certain ordre,
 c'est-à-dire de voitures reliées et tirées par une locomotive ou une des
 voitures.
 
-3.23
-
-**TRAIN COMPONENT** (COMPOSANT DE TRAIN)
+## TRAIN COMPONENT (COMPOSANT DE TRAIN)
 
 La position d'un ÉLÉMENT DE TRAIN dans un TRAIN.
 
-3.24
-
-**TRAIN COMPONENT LABEL ASSIGNMENT** (AFFECTION DE LABEL DE VOITURE)
+## TRAIN COMPONENT LABEL ASSIGNMENT (AFFECTION DE LABEL DE VOITURE)
 
 L'affectation d'une désignation annoncée pour un véhicule ou un élément
 de véhicule pour passagers. Concrètement, cela permet de connaître le
@@ -409,36 +364,26 @@ libellé de la voiture (tel qu’indiqué sur la réservation du voyageur).
 Ce libellé ne dépend pas que du type de TRAIN mais aussi de la COURSE à
 laquelle il est affecté.
 
-3.25
-
-**TRAIN ELEMENT** (ÉLÉMENT DE TRAIN)
+## TRAIN ELEMENT (ÉLÉMENT DE TRAIN)
 
 Une composante élémentaire d'un TRAIN (par exemple voiture, locomotive).
 
-3.26
-
-**TRAIN IN COMPOUND TRAIN** (TRAIN DANS UN TRAIN COMPOSÉ)
+## TRAIN IN COMPOUND TRAIN (TRAIN DANS UN TRAIN COMPOSÉ)
 
 La position d'un TRAIN dans un TRAIN COMPOSÉ.
 
-3.27
-
-**TRAIN NUMBER** (NUMÉRO DE TRAIN)
+## TRAIN NUMBER (NUMÉRO DE TRAIN)
 
 Spécification spécification des codes attribués à certaines COURSES ou
 PARTIE DE COURSE, lorsqu'elles sont réalisées par des TRAINs ou des
 TRAINs COMPOSÉs, pour répondre à un objectif fonctionnel (d'information
 des passagers, suivi des opérations, etc).
 
-3.28
-
-**TYPE OF FLEXIBLE SERVICE** (TYPE DE COURSE FLEXIBLE)
+## TYPE OF FLEXIBLE SERVICE (TYPE DE COURSE FLEXIBLE)
 
 Classification classification des services flexibles.
 
-3.29
-
-**VEHICLE JOURNEY** (COURSE)
+## VEHICLE JOURNEY (COURSE)
 
 Le mouvement planifié d'un véhicule de transport public effectué un JOUR
 TYPE donné, depuis un point début à un point fin d'un PARCOURS sur un
@@ -446,17 +391,13 @@ ITINÉRAIRE. La COURSE est donc l'instanciation d'un PARCOURS donné,
 auquel on va attribuer des heures de passage aux arrêts et des jours
 d'application.
 
-3.30
-
-**VEHICLE MODEL** (MODÈLE DE VEHICULE)
+## VEHICLE MODEL (MODÈLE DE VEHICULE)
 
 Une classification des véhicules de transport public d'un même TYPE DE
 VÉHICULE, par exemple suivant les spécifications relatives aux
 équipements ou à la génération du modèle.
 
-3.31
-
-**VEHICLE TYPE** (TYPE DE VEHICULE)
+## VEHICLE TYPE (TYPE DE VEHICULE)
 
 Une classification des véhicules de transport public résultant des
 spécifications de la planification des horaires en tenant compte du mode
@@ -465,21 +406,9 @@ de transport et de la capacité requise (par exemple bus standard, bus à
 
 # Symboles et abréviations
 
-AO
+AO : Autorité Organisatrice de Transports
 
-<div class="Definition">
-
-Autorité Organisatrice de Transports
-
-</div>
-
-PMR
-
-<div class="Definition">
-
-Personne à Mobilité Réduite
-
-</div>
+PMR : Personne à Mobilité Réduite
 
 # Exigences minimum liées à la LOM et la règlementation Européenne
 
@@ -685,8 +614,7 @@ signalées dans les en-têtes par le suffixe « *(objet inclus)* ».
 ## Les Courses
 
 ![image](media/image1.png)
-
-Figure 1 – Service Journey *– Modèle conceptuel*
+*Service Journey – Modèle conceptuel*
 
 Une COURSE (SERVICE JOURNEY) est le mouvement défini d'un véhicule
 utilisant un PARCOURS (JOURNEY PATTERN) spécifiée. Elle défini pour un
@@ -1159,9 +1087,7 @@ Table 3 – *Journey* – Element *(abstrait)*
 ### Les heures de passage
 
 ![image](media/image2.png)
-
-Figure 2 – Vehicle Journey, Passing Times et Interchanges *– Modèle
-conceptuel*
+*Vehicle Journey, Passing Times et Interchanges – Modèle conceptuel*
 
 Table 4 – *PassingTime* – Element *(objet inclus)*
 
@@ -1365,8 +1291,7 @@ Par exemple : <em><strong>ScheduledStopPointRef, Name, StopType, etc</strong></
 ## Les parties de course
 
 ![image](media/image3.png)
-
-Figure 3 – Journey Parts et Trains *– Modèle conceptuel*
+*Journey Parts et Trains – Modèle conceptuel*
 
 Les PARTIEs DE COURSE seront généralement spécifiques au mode ferré.
 
@@ -1470,8 +1395,7 @@ répétée à intervalle régulier) ou en cadences (on décrit alors toutes
 les courses passant dans un créneau d'une heure).
 
 ![image](media/image4.png)
-
-Figure 4 – Template Service Journey *– Modèle conceptuel*
+*Template Service Journey – Modèle conceptuel*
 
 Pour les courses en fréquence le calcul du temps de parcours sera
 réalisé par simple différence des heures de départs (DepartureTime) aux
@@ -1658,8 +1582,7 @@ Table 13 – *RhythmicalJourneyGroup* – Element
 ## Les Courses couplées
 
 ![image](media/image5.png)
-
-Figure 5 – Courses coupléed *– Modèle conceptuel*
+*Courses coupléed – Modèle conceptuel*
 
 Table 14 – *CoupledJourney* – Element
 
@@ -2082,8 +2005,7 @@ Table 19 – TrainComponentLabelAssignment – Element
 ## Type de véhicule
 
 ![image](media/image6.png)
-
-Figure 6 – Type de Vehicule et Trains *– Modèle Conceptuel*
+*Type de Vehicule et Trains – Modèle Conceptuel*
 
 Table 20 — *VehicleType – Element*
 
