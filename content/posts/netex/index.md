@@ -1157,7 +1157,7 @@ Table 3 – *Journey* – Element *(abstrait)*
 
 ### Les heures de passage
 
-<img src="./media/image2.wmf" style="width:7.05972in;height:5.34306in" />
+![image](media/image2.png)
 
 Figure 2 – Vehicle Journey, Passing Times et Interchanges *– Modèle
 conceptuel*
@@ -1363,7 +1363,7 @@ Par exemple : <em><strong>ScheduledStopPointRef, Name, StopType, etc</strong></
 
 ## Les parties de course
 
-<img src="./media/image3.wmf" style="width:6.69931in;height:4.66528in" />
+![image](media/image3.png)
 
 Figure 3 – Journey Parts et Trains *– Modèle conceptuel*
 
@@ -1468,7 +1468,7 @@ les services en fréquence (on ne décrit alors qu'une course qui sera
 répétée à intervalle régulier) ou en cadences (on décrit alors toutes
 les courses passant dans un créneau d'une heure).
 
-<img src="./media/image4.wmf" style="width:6.73333in;height:4.14931in" />
+![image](media/image4.png)
 
 Figure 4 – Template Service Journey *– Modèle conceptuel*
 
@@ -1656,7 +1656,7 @@ Table 13 – *RhythmicalJourneyGroup* – Element
 
 ## Les Courses couplées
 
-<img src="./media/image5.wmf" style="width:5.63333in;height:3.88889in" />
+![image](media/image5.png)
 
 Figure 5 – Courses coupléed *– Modèle conceptuel*
 
@@ -2080,7 +2080,7 @@ Table 19 – TrainComponentLabelAssignment – Element
 
 ## Type de véhicule
 
-<img src="./media/image6.wmf" style="width:3.47014in;height:3.44167in" />
+![image](media/image6.png)
 
 Figure 6 – Type de Vehicule et Trains *– Modèle Conceptuel*
 
