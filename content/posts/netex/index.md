@@ -3,6 +3,7 @@ title: "NeTEx"
 date: 2021-10-19T13:21:16+00:00
 draft: false
 tags: ["NeTEx"]
+autonumbering: true
 ---
 
 

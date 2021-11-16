@@ -433,3 +433,36 @@ h6:hover .anchor {
 [dir="rtl"] .paginav .next {
     text-align: left;
 }
+
+body {
+    counter-reset: h1; /* Set a counter named 'section', and its initial value is 0. */
+}
+h1 {
+    counter-reset: h2;
+}
+h2 {
+    counter-reset: h3;
+}
+h3 {
+    counter-reset: h4;
+}
+  
+.autonumbering h1::before {
+    counter-increment: h1;
+    content: counter(h1) '. ';
+}
+  
+.autonumbering h2::before {
+    counter-increment: h2;
+    content: counter(h1) '.' counter(h2) '. ';
+}
+
+.autonumbering h3::before {
+    counter-increment: h3;
+    content: counter(h1) '.' counter(h2) '.' counter(h3) '. ';
+}
+
+.autonumbering h4::before {
+    counter-increment: h4;
+    content: counter(h1) '.' counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+}
