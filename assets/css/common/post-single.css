@@ -435,7 +435,7 @@ h6:hover .anchor {
 }
 
 body {
-    counter-reset: h1 figure; /* Set a counter named 'section', and its initial value is 0. */
+    counter-reset: h1 figure;
 }
 h1 {
     counter-reset: h2;
@@ -476,4 +476,28 @@ img + em {
 .autonumbering img + em::before {
     counter-increment: figure;
     content: 'Figure ' counter(figure) ' : ';
+}
+
+.table-title {
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.autonumbering .table-title::before {
+    counter-increment: table-counter;
+    content: 'Table ' counter(table-counter) ' : ';
+}
+
+/*
+autonumbering for the table of content
+Uses nested counters 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters#nesting_counters
+*/
+.autonumbering.toc ul {
+    counter-reset: toc;
+}
+
+.autonumbering.toc li::before {
+    counter-increment: toc;
+    content: counters(toc, '.') '. ';
 }
