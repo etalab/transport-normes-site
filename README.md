@@ -6,8 +6,8 @@ Le site de test actuellement utilisé pour le déploiement est https://elegant-c
 Reste à faire :
 - [x] numérotation automatique des tables
 - [ ] mettre un design état-compatible sur le site
-- [ ] peut-on avoir la numérotation des parties dans la tables des matières ?
-- [ ] faire en sorte qu'un push sur https://github.com/fchabouis/normes-tc-content-test génère un déploiement sur netlify.
+- [x] peut-on avoir la numérotation des parties dans la tables des matières ?
+- [x] faire en sorte qu'un push sur https://github.com/fchabouis/normes-tc-content-test génère un déploiement sur netlify.
 
 # Notes techniques
 
