@@ -1,8 +1,9 @@
 baseURL: https://elegant-carson-e21034.netlify.app
-languageCode: en-us
+languageCode: fr
 title: Normes de TC
 theme: "PaperMod"
 
+defaultContentLanguage: 'fr'
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -21,15 +22,12 @@ languages:
         weight: 1
         menu:
             main:
-                - name: Archive
-                  url: archives
-                  weight: 5
-                - name: Search
+                - name: Recherche
                   url: search/
                   weight: 10
-                - name: Tags
-                  url: tags/
-                  weight: 10
+                # - name: Tags
+                #   url: tags/
+                #   weight: 10
 
     # fr:
     #     languageName: ":fr:"
