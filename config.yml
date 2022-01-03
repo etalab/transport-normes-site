@@ -16,8 +16,8 @@ minify:
     # minifyOutput: true
 
 languages:
-    en:
-        languageName: "English"
+    fr:
+        languageName: "French"
         weight: 1
         menu:
             main:
