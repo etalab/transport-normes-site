@@ -95,8 +95,9 @@ params:
     author: Francis Chabouis
     # author: ["Me", "You"] # multiple authors
 
-    defaultTheme: auto
-    # disableThemeToggle: true
+
+    defaultTheme: light
+    disableThemeToggle: true
     ShowShareButtons: true
     ShowReadingTime: true
     # disableSpecial1stPost: true
@@ -137,10 +138,10 @@ params:
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
-    # label:
-    #     text: "Home"
-    #     icon: icon.png
-    #     iconHeight: 35
+    label:
+        text: 'Normes de transport en commun'
+        icon: 'ministere_transition_ecologique_logo.png'
+        iconHeight: 80
 
     # analytics:
     #     google:
