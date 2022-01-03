@@ -140,7 +140,7 @@ params:
 
     label:
         text: 'Normes de transport en commun'
-        icon: 'ministere_transition_ecologique_logo.png'
+        icon: '/ministere_transition_ecologique_logo.png'
         iconHeight: 80
 
     # analytics:
