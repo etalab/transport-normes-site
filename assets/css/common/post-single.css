@@ -435,7 +435,7 @@ h6:hover .anchor {
 }
 
 body {
-    counter-reset: h1 figure;
+    counter-reset: h1 figure table-counter;
 }
 h1 {
     counter-reset: h2;
