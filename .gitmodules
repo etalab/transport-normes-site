@@ -3,5 +3,5 @@
 	url = https://github.com/adityatelange/hugo-PaperMod.git
 [submodule "content/posts"]
 	path = content/posts
-	url = https://github.com/fchabouis/normes-tc-content-test
+	url = https://github.com/etalab/transport-normes
 	branch = main
