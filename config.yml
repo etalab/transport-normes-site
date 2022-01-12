@@ -1,6 +1,6 @@
 baseURL: https://elegant-carson-e21034.netlify.app
 languageCode: fr
-title: Normes de TC
+title: Normes de transport en commun
 theme: "PaperMod"
 
 defaultContentLanguage: 'fr'
@@ -124,7 +124,7 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "Normes de TC"
+        Title: "Normes de transport en commun"
         Content: |
             ## Contexte 
             Le Règlement Délégué (UE) 2017/1926 De La Commission du 31 mai 2017 (complétant la directive 2010/40/UE du Parlement européen et du Conseil en ce qui concerne la mise à disposition, dans l'ensemble de l'Union, de services d'informations sur les déplacements multimodaux), et en droit français, la LOI n° 2019-1428 du 24 décembre 2019 d'orientation des mobilités, notamment dans son article 25, dispose que les données statiques et dynamiques appelées à être ouvertes, et applicables aux normes NeTex et SIRI, soient représentées par des profils nationaux minimaux, qui sont une déclinaison de ces normes aux besoins métiers en France.
