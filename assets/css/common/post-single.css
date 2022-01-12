@@ -134,10 +134,14 @@
     font-size: 13px;
 }
 
+.post-content table ul {
+  margin-bottom: 0;
+}
+
 .post-content table th,
 .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 80px;
-    padding: 12px 8px;
+    padding: 6px 3px;
     line-height: 1.5;
     border: 1px solid var(--border);
 }
