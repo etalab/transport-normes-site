@@ -139,7 +139,10 @@
 }
 
 .post-content table th,
-.post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+/* I deactive this for the moment as Level 4 selectors are not supported by all browsers yet
+If this is problematic, I will put it back */
+/* .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td { */
+.post-content table td {
     min-width: 80px;
     padding: 6px 3px;
     line-height: 1.5;
