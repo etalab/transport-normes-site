@@ -22,12 +22,12 @@ languages:
         weight: 1
         menu:
             main:
-                - name: Recherche
-                  url: search/
-                  weight: 10
-                # - name: Tags
-                #   url: tags/
+                # - name: Recherche
+                #   url: search/
                 #   weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
 
     # fr:
     #     languageName: ":fr:"
@@ -91,15 +91,18 @@ ignoreFiles:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-    author: Francis Chabouis
+    description:
+    author:
     # author: ["Me", "You"] # multiple authors
 
 
     defaultTheme: light
     disableThemeToggle: true
     ShowShareButtons: true
-    ShowReadingTime: true
+    ShareButtons:
+        - twitter
+        - linkedin
+    ShowReadingTime: false
     # disableSpecial1stPost: true
     displayFullLangName: true
     ShowPostNavLinks: true
@@ -107,7 +110,7 @@ params:
     ShowCodeCopyButtons: true
     ShowToc: true
     comments: true
-    applause: true
+    applause: false
     images: ["papermod-cover.png"]
 
     profileMode:
@@ -132,18 +135,18 @@ params:
 
 
             ## Descriptif
-            Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il est possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/fchabouis/normes-tc-content-test), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
+            Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il est possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/etalab/transport-normes), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
 
             ## Gouvernance
-            Les spécifications techniques sont élaborées et maintenues par le groupe de travail GT7 relatif à l'information voyageur (AFNOR BNTRA/CN03/GT7). Des commentaires peuvent toutefois être formulés sur les pages web de chaque profil, ainsi que directement sur l'[espace de commentaires Github](https://github.com/fchabouis/normes-tc-content-test/issues), permettant à la communauté de producteurs et de réutilisateurs de données de remonter des informations au groupe de travail.
+            Les spécifications techniques sont élaborées et maintenues par le groupe de travail GT7 relatif à l'information voyageur (AFNOR BNTRA/CN03/GT7). Des commentaires peuvent toutefois être formulés sur les pages web de chaque profil, ainsi que directement sur [l'espace de commentaires Github](https://github.com/etalab/transport-normes/issues), permettant à la communauté de producteurs et de réutilisateurs de données de remonter des informations au groupe de travail.
     socialIcons:
         - name: github
-          url: "https://github.com/fchabouis"
+          url: "https://github.com/etalab/transport-normes"
         - name: RsS
           url: "index.xml"
 
     editPost:
-        URL: "https://github.com/fchabouis/francis-chabouis-blog/tree/main/content"
+        URL: "https://github.com/etalab/transport-normes"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
