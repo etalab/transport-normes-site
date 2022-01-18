@@ -1,6 +1,6 @@
 baseURL: https://normes.transport.data.gouv.fr
 languageCode: fr
-title: Normes de transport en commun
+title: Normes des données de transport
 theme: "PaperMod"
 
 defaultContentLanguage: 'fr'
@@ -135,7 +135,7 @@ params:
 
 
             ## Descriptif
-            Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il est possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/etalab/transport-normes), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
+            Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il sera prochainement possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/etalab/transport-normes), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
 
             ## Gouvernance
             Les spécifications techniques sont élaborées et maintenues par le groupe de travail GT7 relatif à l'information voyageur (AFNOR BNTRA/CN03/GT7). Des commentaires peuvent toutefois être formulés sur les pages web de chaque profil, ainsi que directement sur [l'espace de commentaires Github](https://github.com/etalab/transport-normes/issues), permettant à la communauté de producteurs et de réutilisateurs de données de remonter des informations au groupe de travail.
