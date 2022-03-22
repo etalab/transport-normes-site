@@ -131,11 +131,10 @@ params:
         Content: |
             ## Contexte 
             Le Règlement Délégué (UE) 2017/1926 De La Commission du 31 mai 2017 (complétant la directive 2010/40/UE du Parlement européen et du Conseil en ce qui concerne la mise à disposition, dans l'ensemble de l'Union, de services d'informations sur les déplacements multimodaux), et en droit français, la LOI n° 2019-1428 du 24 décembre 2019 d'orientation des mobilités, notamment dans son article 25, dispose que les données statiques et dynamiques appelées à être ouvertes, et applicables aux normes NeTex et SIRI, soient représentées par des profils nationaux minimaux, qui sont une déclinaison de ces normes aux besoins métiers en France.
-            Conformément à l'arrêté du XXX, les spécifications référencées ci-dessous correspondent aux versions officielles et en vigueur des profils des normes à employer en France. Il est donc nécessaire de fournir les données selon ces spécifications techniques pour être conforme au cadre juridique.
-
+            Conformément à l'arrêté du 4 mars 2022, les spécifications référencées ci-dessous correspondent aux versions officielles et en vigueur des profils des normes à employer en France. Il est donc nécessaire de fournir les données selon ces spécifications techniques pour être conforme au cadre juridique.
 
             ## Descriptif
-            Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il est possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/etalab/transport-normes), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
+            Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il sera prochainement possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/etalab/transport-normes), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
 
             ## Gouvernance
             Les spécifications techniques sont élaborées et maintenues par le groupe de travail GT7 relatif à l'information voyageur (AFNOR BNTRA/CN03/GT7). Des commentaires peuvent toutefois être formulés sur les pages web de chaque profil, ainsi que directement sur [l'espace de commentaires Github](https://github.com/etalab/transport-normes/issues), permettant à la communauté de producteurs et de réutilisateurs de données de remonter des informations au groupe de travail.
