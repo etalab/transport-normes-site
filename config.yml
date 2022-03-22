@@ -1,6 +1,6 @@
 baseURL: https://normes.transport.data.gouv.fr
 languageCode: fr
-title: Normes de transport en commun
+title: Normes des données de transport
 theme: "PaperMod"
 
 defaultContentLanguage: 'fr'
