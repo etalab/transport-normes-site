@@ -69,3 +69,15 @@ pre:hover .copy-code {
 .hl {
     background-color: rgb(255, 255, 152);
 }
+
+.hl_france {
+    background-color: rgb(98, 255, 50);
+}
+
+.hl_delete {
+    background-color: rgb(0, 225, 255);
+}
+
+.post-content h7 {
+    font-size: 12px;
+}
