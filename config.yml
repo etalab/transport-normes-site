@@ -145,8 +145,8 @@ params:
           url: "index.xml"
 
     editPost:
-        URL: "https://github.com/etalab/transport-normes"
-        Text: "Suggest Changes" # edit text
+        URL: 'https://github.com/etalab/transport-normes/tree/main'
+        Text: 'Proposer une modification' # edit text
         appendFilePath: true # to append file path to Edit link
 
     label:
