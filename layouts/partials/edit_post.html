@@ -1,7 +1,7 @@
 {{- if or .Params.editPost.URL .Site.Params.editPost.URL -}}
 {{- $fileUrlPath := path.Join .File.Path }}
-<!-- remove manually posts/ from path, as the content lives in a different repository than the site code -->
-{{- $fileUrlPath := strings.Replace  $fileUrlPath "posts/"  "" }}
+<!-- remove manually normes/ from path, as the content lives in a different repository than the site code -->
+{{- $fileUrlPath := strings.Replace  $fileUrlPath "normes/"  "" }}
 
 
 {{- if or .Params.author $.Site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}&nbsp;|&nbsp;{{- end -}}
