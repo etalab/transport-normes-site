@@ -1,7 +1,7 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
-[submodule "content/posts"]
-	path = content/posts
+[submodule "content/normes"]
+	path = content/normes
 	url = https://github.com/etalab/transport-normes
 	branch = main
