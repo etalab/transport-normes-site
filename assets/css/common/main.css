@@ -81,3 +81,18 @@ pre:hover .copy-code {
 .post-content h7 {
     font-size: 12px;
 }
+
+/* by default: display unspecified marks as red to act to
+   make sure we notice them & add proper styling */
+
+mark, .mark {
+    background-color: red;
+    color: white;
+    animation: blink-live 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes blink-live{
+    0% { opacity: 1.0; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1.0; }
+}
