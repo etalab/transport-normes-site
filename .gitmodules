@@ -4,4 +4,4 @@
 [submodule "content/normes"]
 	path = content/normes
 	url = https://github.com/etalab/transport-normes
-	branch = main
+	branch = parkings-tarifs-en-pdf
