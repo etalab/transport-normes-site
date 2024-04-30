@@ -20,7 +20,7 @@ rm -rf $CONTENT_FOLDER/SIRI
 echo "Cloning new SIRI content..."
 rm -rf $TEMP_FOLDER | true
 mkdir $TEMP_FOLDER && cd $TEMP_FOLDER
-git clone git@github.com:etalab/$SIRI_REPO_NAME.git
+git clone https://github.com/etalab/$SIRI_REPO_NAME.git
 cd $SIRI_REPO_NAME
 # just for debugging purposes
 git tag -l
