@@ -1,0 +1,4 @@
+# Ref: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+command = "echo TOML-configuration takes precedence && git submodule update --init --remote content/normes && hugo --minify"
+publish = "public"
