@@ -1,5 +1,5 @@
 # Ref: https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-command = "build.sh"
+command = "./build.sh"
 publish = "public"
