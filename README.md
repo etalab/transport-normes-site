@@ -13,6 +13,36 @@ git submodule update --init --recursive
 hugo server
 ```
 
+## Mise à jour du template
+
+```
+cd themes/PaperMod
+git checkout v6.0
+cd ../..
+```
+
+Pour vérifier les commits:
+
+```
+❯ git diff themes/PaperMod 
+diff --git a/themes/PaperMod b/themes/PaperMod
+index 8021be2..54a3c60 160000
+--- a/themes/PaperMod
++++ b/themes/PaperMod
+@@ -1 +1 @@
+-Subproject commit 8021be2ddb5336bcc84682d4702ec43b7a579b81
++Subproject commit 54a3c6073518005182f3c3250ddb7e8c0cacd7ad
+```
+
+Puis committer:
+
+```
+git add themes/PaperMod
+git commit -m "Bump PaperMod template to v6.0"
+```
+
+On peut faire un rendu en preview sur Netlify ou en local et comparer les répertoires si besoin.
+
 ## Commande de déploiement
 
 La commande utilisée pour déployer le site sur Netlify est la suivante :
