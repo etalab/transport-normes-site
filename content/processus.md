@@ -85,7 +85,7 @@ Ce processus technique comprend trois phases principales pouvant être réalisé
 - La publication de la version validée sur le site.
 
 Le schéma ci-après illustre les trois phrases, en se plaçant dans le cadre de profils pilotés par le GT7 au sein de la CN03 :
-![processus](https://github.com/TuThoThai/transport-profil-netex-fr/blob/Process-Publication/Processus%20v2.png)
+![processus](https://github.com/TuThoThai/transport-normes-site/content/Processus%20v2.png)
 
 ## La rédaction, modification ou la révision
 La rédaction ou la révision des documents techniques se fait au sein de groupes de travail dédiés. Ces groupes de travail peuvent dépendre de la CN03 (BNTRA), du PAN ou de la Fabrique des Mobilités. Chaque groupe de travail établit ses procédures internes de rédaction, modification ou révision du contenu. Chaque groupe établit également ses rôles de contribution et validation.
