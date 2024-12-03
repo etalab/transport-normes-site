@@ -7,7 +7,7 @@ draft: true
 # Introduction
 Ce document a été rédigé dans le cadre des travaux de normalisation menés par le Bureau de normalisation pour les transports, les routes et leurs aménagements (BNTRA), au sein de la Commission de Normalisation Transport Public (CN03) et, plus particulièrement, de son Groupe de Travail sur l’information voyageur et l’exploitation des services de mobilités (GT7).
 
-Le groupe de travail a été mandaté pour piloter l’usage de l’outil [GitHub](https://github.com/) pour la rédaction, la validation et la publication des profils français (aussi appelés profils France) des normes européennes ayant trait au Transport Public. La publication de ces profils se faisant sur le site [normes.transport.data.gouv.fr](https://normes.transport.data.gouv.fr/) (ci-après nommé "site"), ce document a été rédigé avec l'appui des équipes du [Point d'Accès National aux données de transport](https://transport.data.gouv.fr/) (ci-après nommé "PAN") qui ont la gestion du site de publication à ce jour.
+Le GT7 a été mandaté pour piloter l’usage de l’outil [GitHub](https://github.com/) pour la rédaction, la validation et la publication des profils français (aussi appelés profils France) des normes européennes ayant trait au Transport Public. La publication de ces profils se faisant sur le site [normes.transport.data.gouv.fr](https://normes.transport.data.gouv.fr/) (ci-après nommé "site"), ce document a été rédigé avec l'appui des équipes du [Point d'Accès National aux données de transport](https://transport.data.gouv.fr/) (ci-après nommé "PAN") qui ont la gestion du site de publication à ce jour.
 
 Ce document a un double objectif :
 - Accompagner et documenter les travaux du GT7,
@@ -16,7 +16,7 @@ Ce document a un double objectif :
 
 # Périmètre de publication du site
 À ce jour, il a été décidé que feront l’objet de publication sur le site l’ensemble des profils France des normes européennes produits par le GT7 et GT9, à savoir :
-- Le profil français  de la norme européenne NeTEx et ses différents composants (appelés “sous-profils”)
+- Le profil français de la norme européenne NeTEx et ses différents composants (appelés “sous-profils”)
   - Profil France - Éléments communs
   - Profil France - Description des arrêts
   - Profil France - Horaires
@@ -44,9 +44,9 @@ Cependant, le processus détaillé ci-après a pour vocation d’être élargi �
 
 Dans le cas de la norme NeTEx, il existe également des sous-profils pour définir plus finement certains aspects des transports publics (ex. Accessibilité) ; leur ensemble forme le profil France de la norme NeTEx.
 
-> Exemple : NeTEx – Profil France   et son sous profil NeTEx – Profil France - Accessibilité
+> Exemple : NeTEx – Profil France et son sous profil NeTEx – Profil France - Accessibilité
 
-**Standard** : référentiel ou ensemble de recommandations développées et préconisées par un groupe autre qu’une instance de normalisation nationale ou internationale ou non approuvé par ces dernières pour un usage national ou international. On ne parle de standard qu'à partir du moment où le référentiel a une diffusion large, on parle alors de standard de facto (standard de fait). Un standard est ouvert quand le référentiel est diffusé librement.
+**Standard** : référentiel ou ensemble de recommandations développés et préconisés par un groupe autre qu’une instance de normalisation nationale ou internationale, ou non approuvés par ces dernières. Le standard est qualifié en tant que tel qu'à partir du moment où le référentiel a une diffusion large. On parle alors de standard de facto (standard de fait). Un standard est ouvert quand il correspond à un référentiel diffusé librement.
 
 > Exemple : GTFS
 
@@ -54,17 +54,16 @@ Dans le cas de la norme NeTEx, il existe également des sous-profils pour défin
 
 > Exemple : SIRI sur certaines parties
 
-**Schéma national** : 
-tout autre document issu d’un groupe de travail du BNTRA ou du PAN dont la gouvernance ne dépend pas directement d’instances de normalisation européennes ou internationales. Ces documents sont généralement issus d’un besoin spécifique de standardisation des échanges de données requises à un niveau national sans qu’il existe une norme ou standard adéquat. Ces schémas ont, le plus souvent, vocation à devenir des standards nationaux, voire des normes européennes.
+**Schéma national** : tout autre document issu d’un groupe de travail du BNTRA ou du PAN dont la gouvernance ne dépend pas directement d’instances de normalisation européennes ou internationales. Ces documents sont généralement issus d’un besoin spécifique de standardisation des échanges de données requises à un niveau national sans qu’il existe une norme ou standard adéquat. Ces schémas ont, le plus souvent, vocation à devenir des standards nationaux, voire des normes européennes.
 
 > Exemple : Aménagements cyclables
 
-Dans le reste du document, "documents techniques" fera référence aux profils de normes, standards et spécifications techniques sans distinction.
+Dans le reste du document, le terme "documents techniques" fera référence aux profils de normes, standards et spécifications techniques sans distinction.
 
 ## De l'usage des profils dédiés
 Si un organisme souhaite avoir un profil dédié à ses usages, il est très fortement recommandé que ce profil soit basé sur les profils nationaux publiés sur le site. Cela a pour but principal de maintenir l’interopérabilité des données échangées au niveau national. En conséquence, le profil dédié contiendra :
 - Une référence explicite au profil national ayant servi de base au profil dédié,
-- Les explications liées à la création de sous-ensemble de champs ou d’attributs du profil national,
+- Les explications liées à la création de sous-ensembles de champs ou d’attributs du profil national,
 - Les règles explicites du profil dédié,
 - Des exemples propres au profil dédié et à sa constellation d’acteurs pour faciliter leurs échanges de données.
 
@@ -101,14 +100,14 @@ Pour bien différencier les versions de travail des versions stables, nous sugg�
 
 Il est à noter que le choix a été fait de privilégier les _squash merge_ pour toute modification dans une volonté de meilleure clarté de l’historique des changements.
 
-Notamment lors de l’initialisation des profils et après création de son chemin de fer, il est très fortement conseillé de travailler sur des petites modifications pour qu’elles soient plus simples à relire par les autres contributeurs.
+Notamment lors de l’initialisation des profils et après création de sa structure (ou squelette), il est très fortement conseillé de travailler sur des petites modifications pour qu’elles soient plus simples à relire par les autres contributeurs.
 
-Si le profil est assez "actif", il est également conseillé de le réviser ou modifier assez fréquemment pour ne pas oublier les retours / commentaires reçus ou de laisser les demandes de changer trop longtemps dans le répertoire GitHub. La fréquence idéale est de 2-3 mois.
+Si le profil est assez "actif", il est également conseillé de le réviser ou modifier assez fréquemment pour ne pas oublier les retours / commentaires reçus ou de laisser les demandes de changement trop longtemps dans le répertoire GitHub. La fréquence idéale est de 2-3 mois.
 
 ## L'aval pour publication
 Une fois la proposition de changement dans la branche principale du répertoire GitHub et avant sa publication sur le site, le groupe de travail doit vérifier que le fruit de leurs travaux est prêt à être publié. Doivent être vérifiés les éléments suivants :
 - Concordance du contenu avec les derniers avals donnés par l’ensemble des membres du groupe de travail,
-- Résolutiojns de toutes les questions (_issues_) ou demandes de changements (Pull Requests) relatives à la version à publier, il peut également être décidé que ces questions ou demandes seront traitées lors de l’élaboration de la version suivante,
+- Résolutions de toutes les questions (_issues_) ou demandes de changements (Pull Requests) relatives à la version à publier, il peut également être décidé que ces questions ou demandes soient traitées lors de l’élaboration de la version suivante,
 - Formatage correct en Markdown du document,
 - Indentation correcte du niveau de version (voir au §5 pour plus de détails).
 
@@ -131,7 +130,7 @@ Cette demande doit également donner lieu à la création d’une « tuile » da
 
 Cette demande se fait en parallèle du processus de normalisation mis en place au sein de la CN03, à savoir une présentation officielle du contenu des documents techniques lors d’une plénière avec demande d’approbation par l’ensemble des membres de la CN03. Cette approbation peut se faire lors de la plénière elle-même, via une consultation des membres (usage de l’outil PFC AFNOR) ou à la plénière suivante. Ce n’est qu’une fois cette approbation reçue en CN03 que les documents techniques sont prêts à être publiés.
 
-Il est à noter qu’à ce jour l’ensemble des profils de NeTEx et SIRI publiés sur le site sont en complément d’une obligation légale d’ouverture des données de transport, c’est-à-dire mentionnés dans des arrêtés. Après validation du contenu au sein de la CN03, la publication doit recevoir une validation formelle par la DGITM/MINT avant qu’elle ne soit réalisée.
+Il est à noter qu’à ce jour  l’ensemble des profils de NeTEx et SIRI publiés sur le site sont considérés comme officiels du point de vue légal. Après validation du contenu au sein de la CN03, la publication doit recevoir une validation formelle par la DGITM/MINT avant qu’elle ne soit réalisée.
 
 Les équipes en charge du site, à ce jour celle du PAN, se charge de la publication une fois l’aval officiel reçu par le groupe de travail et de son représentant, mandaté par la CN03. Cet aval doit être documenté dans GitHub par les personnes ayant reçu le mandat de leurs pairs au sein du groupe de travail.
 
