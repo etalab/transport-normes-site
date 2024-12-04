@@ -130,9 +130,20 @@ params:
         Title: "Normes de transport en commun"
         Content: |
             ## Contexte
-            Le Règlement Délégué (UE) 2017/1926 De La Commission du 31 mai 2017 (complétant la directive 2010/40/UE du Parlement européen et du Conseil en ce qui concerne la mise à disposition, dans l'ensemble de l'Union, de services d'informations sur les déplacements multimodaux), et en droit français, la LOI n° 2019-1428 du 24 décembre 2019 d'orientation des mobilités, notamment dans son article 25, dispose que les données statiques et dynamiques appelées à être ouvertes, et applicables aux normes NeTex et SIRI, soient représentées par des profils nationaux minimaux, qui sont une déclinaison de ces normes aux besoins métiers en France.
-            Conformément à l'arrêté du [4 mars 2022](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045382208), les spécifications référencées ci-dessous correspondent aux versions officielles et en vigueur des profils des normes à employer en France. Il est donc nécessaire de fournir les données selon ces spécifications techniques pour être conforme au cadre juridique.
+            L'ouverture données statiques, dynamiques, observées et historiques des déplacements multimodaux est encadrée :
+            - au niveau européen, par le [règlement délégué (UE) 2017/1926](https://eur-lex.europa.eu/eli/reg_del/2017/1926/2024-03-04) de la Commission du 31 mai 2017 modifié par le règlement délégué (UE) 2024/490 de la Commission du 29 novembre 2023, dit "règlement MMTIS". Ce règlement complète la directive 2010/40/UE du Parlement européen et du Conseil en ce qui concerne la mise à disposition, dans l'ensemble de l'Union, de services d'informations sur les déplacements multimodaux.
+            - au niveau français, par les articles L. 1115-1 à L. 1115-7, D. 1115-1, R. 1115-2 à R. 1115-8 et D. 1115-9 à D. 1115-11 du code du transports, notamment créés ou modifiés par la loi n° 2019-1428 du 24 décembre 2019 d’orientation des mobilités, dites loi "LOM".
 
+            D'une part, les données existantes doivent être mises à disposition sur le point d’accès national des données multimodales en utilisant notamment les normes et spécifications techniques suivantes :
+            - Pour les données routières : le format défini par le règlement dit "RTTI" ;
+            - Pour les autres données :
+                - NeTEx CEN/TS 16614 et ses versions ultérieures, dit "NeTEx" ;
+                - SIRI CEN/TS 15531 et versions ultérieures, dit "SIRI" ;
+                - La norme établissant le modèle de données de référence pour le Transport Public Transmodel EN 12896 en l’absence de protocole d’échange de référence.
+
+            D’autre part, les profils nationaux correspondent à des sous-ensembles de ces normes répondant aux besoins métiers. La mise à disposition des données selon une norme respecte a minima ces profils.
+            Conformément à l’arrêté du [4 mars 2022](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045382208), les profils référencés ci-dessous correspondent aux versions officielles et en vigueur des profils à employer en France. 
+            
             ## Descriptif
             Les liens ci-dessous permettent d'accéder au format web au contenu des profils. Sur chacune des pages, il sera prochainement possible de télécharger une version pdf du document correspondant. Un espace [Github](https://github.com/etalab/transport-normes), hébergeant le contenu de ces documents, offre par ailleurs la possibilité d'explorer et d'exploiter leur contenu au format markdown.
 
