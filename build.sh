@@ -9,7 +9,9 @@ CONTENT_FOLDER=content/normes
 # ultimately something more flexible with be introduced
 # (e.g. multi-version support, and first "automatic latest version")
 SIRI_VERSION=v1.7
-NETEX_VERSION=v2.3
+# TODO: use v2.4.0 once out, instead
+NETEX_BRANCH=next
+NETEX_COMMIT=9b7150f9d2ca246829f31025b6eb5f49b8eddee3
 LOCAL_TEMP_FOLDER=./tmp
 SIRI_REPO_NAME=transport-profil-siri-fr
 NETEX_REPO_NAME=transport-profil-netex-fr
@@ -28,9 +30,24 @@ function checkout_tag() {
         $LOCAL_TEMP_FOLDER/${repo_name}
 }
 
+# added so that I can work on a non-released branch, given a specific commit.
+function checkout_commit() {
+    local repo_name="$1"
+    local branch="$2"
+    local commit="$3"
+    echo "Checking out repo ${repo_name} at commit ${commit}"
+    git clone \
+        "https://github.com/etalab/${repo_name}.git" \
+        $LOCAL_TEMP_FOLDER/${repo_name}
+    git -c advice.detachedHead=false \
+        -C $LOCAL_TEMP_FOLDER/${repo_name} \
+        checkout "${commit}"
+}
+
 git submodule update --init themes/PaperMod
 
-checkout_tag "$NETEX_REPO_NAME" "$NETEX_VERSION"
+# TODO: switch to `checkout_tag` once `v2.4.0` is released
+checkout_commit "$NETEX_REPO_NAME" "$NETEX_BRANCH" "$NETEX_COMMIT"
 checkout_tag "$SIRI_REPO_NAME" "$SIRI_VERSION"
 
 echo "Removing legacy NeTEx & SIRI content..."
