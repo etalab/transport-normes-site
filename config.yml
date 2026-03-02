@@ -162,8 +162,8 @@ params:
 
     label:
         text: 'Normes de transport en commun'
-        icon: '/logo.png'
-        iconHeight: 80
+        icon: '/logo-2026-03.png'
+        iconHeight: 84
 
     # analytics:
     #     google:
