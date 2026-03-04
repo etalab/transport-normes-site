@@ -47,9 +47,6 @@ git submodule update --init themes/PaperMod
 checkout_tag "$NETEX_REPO_NAME" "$NETEX_VERSION"
 checkout_tag "$SIRI_REPO_NAME" "$SIRI_VERSION"
 
-echo "Removing legacy NeTEx & SIRI content..."
-rm -rf $CONTENT_FOLDER/SIRI $CONTENT_FOLDER/NeTEx
-
 echo "Copying cloned NeTEx content to the right place..."
 cp -r $LOCAL_TEMP_FOLDER/$NETEX_REPO_NAME/NeTEx $CONTENT_FOLDER
 
