@@ -47,7 +47,11 @@ git submodule update --init themes/PaperMod
 checkout_tag "$NETEX_REPO_NAME" "$NETEX_VERSION"
 checkout_tag "$SIRI_REPO_NAME" "$SIRI_VERSION"
 
-echo "Delete pre-existing content folder (see https://github.com/etalab/transport-normes-site/issues/47)"
+echo "Create content folder, if it does not exist yet"
+mkdir -p "${CONTENT_FOLDER:?CONTENT_FOLDER is not set}"
+
+echo "Remove potentially present Netlify legacy cache, as well as local content during development"
+# see https://github.com/etalab/transport-normes-site/issues/47 for instance
 find "${CONTENT_FOLDER:?CONTENT_FOLDER is not set}" -mindepth 1 -delete
 
 echo "Copying cloned NeTEx content to the right place..."
