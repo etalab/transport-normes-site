@@ -47,8 +47,8 @@ git submodule update --init themes/PaperMod
 checkout_tag "$NETEX_REPO_NAME" "$NETEX_VERSION"
 checkout_tag "$SIRI_REPO_NAME" "$SIRI_VERSION"
 
-echo "Debugging pre-existing content"
-tree $CONTENT_FOLDER
+echo "Delete pre-existing content folder (see https://github.com/etalab/transport-normes-site/issues/47)"
+find "${CONTENT_FOLDER:?CONTENT_FOLDER is not set}" -mindepth 1 -delete
 
 echo "Copying cloned NeTEx content to the right place..."
 cp -r $LOCAL_TEMP_FOLDER/$NETEX_REPO_NAME/NeTEx $CONTENT_FOLDER
