@@ -9,9 +9,7 @@ CONTENT_FOLDER=content/normes
 # ultimately something more flexible with be introduced
 # (e.g. multi-version support, and first "automatic latest version")
 SIRI_VERSION=v1.7
-# TODO: use v2.4.0 once out, instead
-NETEX_BRANCH=next
-NETEX_COMMIT=9b7150f9d2ca246829f31025b6eb5f49b8eddee3
+NETEX_VERSION=v2.4.0
 LOCAL_TEMP_FOLDER=./tmp
 SIRI_REPO_NAME=transport-profil-siri-fr
 NETEX_REPO_NAME=transport-profil-netex-fr
@@ -46,8 +44,7 @@ function checkout_commit() {
 
 git submodule update --init themes/PaperMod
 
-# TODO: switch to `checkout_tag` once `v2.4.0` is released
-checkout_commit "$NETEX_REPO_NAME" "$NETEX_BRANCH" "$NETEX_COMMIT"
+checkout_tag "$NETEX_REPO_NAME" "$NETEX_VERSION"
 checkout_tag "$SIRI_REPO_NAME" "$SIRI_VERSION"
 
 echo "Removing legacy NeTEx & SIRI content..."
