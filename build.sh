@@ -8,7 +8,7 @@ CONTENT_FOLDER=content/normes
 # NOTE: freezing to the tag matching the latest official release,
 # ultimately something more flexible with be introduced
 # (e.g. multi-version support, and first "automatic latest version")
-SIRI_VERSION=v1.7
+SIRI_VERSION=v1.8.0
 NETEX_VERSION=v2.4.0
 LOCAL_TEMP_FOLDER=./tmp
 SIRI_REPO_NAME=transport-profil-siri-fr
