@@ -38,6 +38,10 @@
     margin-top: 24px;
 }
 
+.home-info ul {
+    padding-inline-start: 30px;
+}
+
 .post-entry {
     position: relative;
     margin-bottom: var(--gap);
