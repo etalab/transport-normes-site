@@ -1,0 +1,65 @@
+<div id="explorer">
+  <button id="explorer-previous" type="button">&lt;</button>
+  <span id="explorer-counter"></span>
+  <button id="explorer-next" type="button">&gt;</button>
+</div>
+
+<script>
+    // Set this localStorage key to enable the changes explorer:
+    const enabled = window.localStorage.getItem("explorer.enabled");
+
+    const previous = document.getElementById("explorer-previous");
+    const next = document.getElementById("explorer-next");
+    const counter = document.getElementById("explorer-counter");
+    const changes = Array.from(document.querySelectorAll("mark, .mark, .hl")).slice(1);
+    var currentIndex = 0;
+
+    function scrollIntoViewWithOffset(element, offset) {
+      window.scrollTo({
+        behavior: 'smooth',
+        top:
+          element.getBoundingClientRect().top -
+          document.body.getBoundingClientRect().top -
+          offset,
+      })
+    }
+
+    function explore(target) {
+        changes[currentIndex].classList.remove("focused");
+        if (target == previous) {
+            currentIndex -= 1;
+        } else {
+            currentIndex += 1;
+        }
+        if (currentIndex < 0) {
+            currentIndex = changes.length - 1;
+        }
+        if (currentIndex == changes.length) {
+            currentIndex = 0;
+        }
+        counter.innerText = `${currentIndex + 1} / ${changes.length}`;
+        changes[currentIndex].classList.add("focused");
+        scrollIntoViewWithOffset(changes[currentIndex], 300);
+    }
+
+    previous.addEventListener("click", event => explore(event.currentTarget));
+    next.addEventListener("click", event => explore(event.currentTarget));
+
+    document.addEventListener("keyup", (event) => {
+      switch (event.key) {
+        case "ArrowRight":
+          explore(next);
+          break;
+
+        case "ArrowLeft":
+          explore(previous);
+          break;
+      }
+    })
+
+    counter.innerText = `${currentIndex + 1} / ${changes.length}`;
+
+    if (enabled && changes.length > 0) {
+        explorer.classList.add("visible");
+    }
+</script>
