@@ -81,3 +81,40 @@ pre:hover .copy-code {
 .post-content h7 {
     font-size: 12px;
 }
+
+mark.focused, .hl.focused, .mark.focused {
+    background-color: color-mix(in oklch, yellow, orange);
+    outline: 1px solid orange;
+}
+
+#explorer {
+    visibility: hidden;
+    background: rgb(from white r g b / 0.95);
+    position: fixed;
+    bottom: 60px;
+    left: 30px;
+    z-index: 99;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#explorer.visible {
+    visibility: visible;
+}
+
+#explorer button {
+    color: var(--secondary);
+    background: var(--tertiary);
+    height: 42px;
+    border-radius: 64px;
+    padding: 0 15px;
+}
+
+#explorer button:hover {
+    color: var(--primary);
+}
+
+#explorer span {
+    font-weight: 600;
+}
