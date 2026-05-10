@@ -161,12 +161,12 @@ params:
           Pour des raisons techniques, seule la version actuelle peut être rendue visible sur le site. Nous vous encourageons donc à visiter les dépôts Git ci-dessus ou à rejoindre le GT7 afin de suivre les évolutions.
     socialIcons:
         - name: github
-          url: "https://github.com/etalab/transport-normes"
+          url: "https://github.com/etalab/transport-normes-site"
         - name: RsS
           url: "index.xml"
 
     editPost:
-        URL: 'https://github.com/etalab/transport-normes/tree/main'
+        URL: 'https://github.com/etalab/transport-normes-site/issues'
         Text: 'Proposer une modification' # edit text
         appendFilePath: true # to append file path to Edit link
 
