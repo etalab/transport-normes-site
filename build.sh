@@ -61,4 +61,4 @@ echo "Copying cloned SIRI content to the right place..."
 cp -r $LOCAL_TEMP_FOLDER/$SIRI_REPO_NAME/SIRI $CONTENT_FOLDER
 
 echo "Building site..."
-hugo --minify
+hugo --minify --baseURL "$DEPLOY_PRIME_URL"
