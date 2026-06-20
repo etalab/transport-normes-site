@@ -74,6 +74,14 @@ tr:has(mark), tr:has(span.hl) {
     background-color: color-mix(rgb(255, 255, 152), white 80%);
 }
 
+tr:hover td {
+    background-color: color-mix(lightgrey, white 80%);
+}
+
+tr:hover:has(mark) td, tr:hover:has(span.hl) td {
+    background-color: color-mix(rgb(255, 255, 152), white 40%);
+}
+
 .hl_france {
     background-color: rgb(98, 255, 50);
 }
