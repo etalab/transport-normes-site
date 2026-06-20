@@ -85,3 +85,16 @@ tr:has(mark), tr:has(span.hl) {
 .post-content h7 {
     font-size: 12px;
 }
+
+.post-content th, .post-content td {
+    vertical-align: top;
+}
+
+.post-content.post-content table td, .post-content.post-content table th {
+    padding: 4px 6px;
+    min-width: 40px;
+}
+
+td > p:last-child {
+    margin-bottom: 0;
+}
