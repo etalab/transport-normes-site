@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normes des données de transport — Wireframe: Accueil</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/icon/dsfr-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/main.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    /* Wireframe-specific overrides */
+    .fr-header__service-title {
+      font-size: 1.125rem;
+    }
+
+    .wireframe-label {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      background: #e74c3c;
+      color: white;
+      padding: 0.25rem 1rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 0 0 0 8px;
+    }
+
+    .home-governance {
+      max-width: 64rem;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .home-governance .fr-callout {
+      background: #f6f6f6;
+      border-left: 3px solid #000091;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .home-norms {
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .home-norms h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: #16161a;
+    }
+
+    .norm-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 1.5rem;
+    }
+
+    .norm-card {
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .norm-card:hover {
+      box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1);
+    }
+
+    .norm-card h3 {
+      margin-top: 0;
+      color: #000091;
+      font-size: 1.5rem;
+    }
+
+    .norm-card .version-badge {
+      display: inline-block;
+      background: #e7f8f0;
+      color: #067b57;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.25rem;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .norm-card p {
+      color: #494953;
+      line-height: 1.6;
+    }
+
+    .wireframe-note {
+      background: #fff3cd;
+      border-left: 3px solid #f0ad4e;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: #664d03;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-label">WIREFRAME — Accueil</div>
+
+  <!-- Header -->
+  <header class="fr-header" role="banner">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">
+                  République<br>
+                  Française
+                </p>
+              </div>
+              <div class="fr-header__service">
+                <span class="fr-header__service-title">Normes des données de transport</span>
+                <p class="fr-header__service-tagline">transport.data.gouv.fr</p>
+              </div>
+            </div>
+          </div>
+          <div class="fr-header__search fr-enlarge-link">
+            <!-- Search deferred -->
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li><a class="fr-btn fr-icon-github-line" href="#" title="GitHub">GitHub</a></li>
+                <li><a class="fr-btn fr-icon-rss-line" href="#" title="RSS">RSS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="fr-container">
+
+      <!-- Governance Section (first, as decided) -->
+      <section class="home-governance" aria-labelledby="governance-title">
+        <div class="wireframe-note">
+          ⚠️ Wireframe note: Governance content from config.yml homeInfoParams. Text is truncated for brevity — full text would appear here.
+        </div>
+
+        <h2 id="governance-title" class="fr-text--lead">Normalisation des données multimodales</h2>
+
+        <div class="fr-callout">
+          <h3 class="fr-callout__title">Cadre réglementaire</h3>
+          <p>Conformément à l'arrêté du 4 mars 2022, les spécifications référencées sur ce site correspondent aux versions officielles et en vigueur des profils français des normes européennes NeTEx CEN/TS 16614 pour la description de l'offre planifiée et des infrastructures, et SIRI EN CEN/TS 15531 pour l'information en temps réel.</p>
+
+          <h3 class="fr-callout__title mt-2w">Gouvernance</h3>
+          <p>Ce site, son contenu et les obligations réglementaires associées relèvent de la responsabilité de la direction générale des transports, des infrastructures et des mobilités. Le site est maintenu par l'équipe de transport.data.gouv.fr.</p>
+          <p>Les spécifications techniques sont élaborées et maintenues par le groupe de travail GT7 relatif à l'information voyageur (AFNOR BNTRA/CN03/GT7).</p>
+
+          <h3 class="fr-callout__title mt-2w">Description</h3>
+          <p>Les profils France sont une implémentation des normes européennes, adaptée aux besoins métiers nationaux.</p>
+        </div>
+      </section>
+
+      <!-- Norm Cards -->
+      <section class="home-norms" aria-labelledby="norms-title">
+        <h2 id="norms-title">Normes disponibles</h2>
+
+        <div class="norm-cards">
+          <!-- NeTEx Card -->
+          <a href="netex.html" class="norm-card">
+            <span class="version-badge">✓ Version actuelle : v2.4.0</span>
+            <h3>NeTEx</h3>
+            <p>Profil France de la norme NeTEx (CEN/TS 16614) pour la description de l'offre planifiée et des infrastructures de transport.</p>
+            <div class="fr-tags-group mt-1w">
+              <span class="fr-tag">Arrêts</span>
+              <span class="fr-tag">Horaires</span>
+              <span class="fr-tag">Réseaux</span>
+              <span class="fr-tag">Tarifs</span>
+              <span class="fr-tag">Accessibilité</span>
+              <span class="fr-tag">Parkings</span>
+            </div>
+          </a>
+
+          <!-- SIRI Card -->
+          <a href="#" class="norm-card">
+            <span class="version-badge">✓ Version actuelle : v1.8.0</span>
+            <h3>SIRI</h3>
+            <p>Profil France de la norme SIRI (CEN/TS 15531) pour l'information en temps réel des services de transport.</p>
+            <div class="fr-tags-group mt-1w">
+              <!-- Sections to be defined when migrated -->
+              <span class="fr-tag fr-tag--sm">Migration en cours</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fr-footer" role="contentinfo">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand fr-enlarge-link">
+          <p class="fr-logo">République Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">transport.data.gouv.fr — Point d'accès national aux données de transport</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/dsfr.main.min.js"></script>
+</body>
+</html>

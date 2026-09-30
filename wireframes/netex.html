@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeTEx — Wireframe: Norme</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/icon/dsfr-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/main.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .wireframe-label {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      background: #e74c3c;
+      color: white;
+      padding: 0.25rem 1rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 0 0 0 8px;
+    }
+
+    .wireframe-note {
+      background: #fff3cd;
+      border-left: 3px solid #f0ad4e;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: #664d03;
+    }
+
+    .norm-home-header {
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .norm-home-header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .norm-home-header p {
+      color: #494953;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-cards {
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-cards h2 {
+      font-size: 1.25rem;
+      color: #696977;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      gap: 1rem;
+    }
+
+    .section-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .section-card:hover {
+      transform: translateY(-2px);
+      transition: transform 0.2s;
+    }
+
+    .wireframe-version-selector {
+      max-width: 64rem;
+      margin: 0 auto 1.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .version-info-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #f0f0ff;
+      border: 1px solid #c4c4e8;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .version-info-bar .current-version {
+      font-weight: bold;
+      color: #067b57;
+    }
+
+    .version-info-bar .other-versions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .version-tag {
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+    .version-tag.current {
+      background: #e7f8f0;
+      color: #067b57;
+    }
+
+    .version-tag.old {
+      background: #e8f4fd;
+      color: #1212ff;
+    }
+
+    .version-tag.wip {
+      background: #fff3cd;
+      color: #856404;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-label">WIREFRAME: NeTEx — Norme</div>
+
+  <!-- Header -->
+  <header class="fr-header" role="banner">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">
+                  République<br>
+                  Française
+                </p>
+              </div>
+              <div class="fr-header__service">
+                <span class="fr-header__service-title">Normes des données de transport</span>
+                <p class="fr-header__service-tagline">transport.data.gouv.fr</p>
+              </div>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li><a class="fr-btn fr-icon-github-line" href="#" title="GitHub">GitHub</a></li>
+                <li><a class="fr-btn fr-icon-rss-line" href="#" title="RSS">RSS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Norm selector pill in top bar -->
+  <nav class="fr-container" style="padding-top: 0.5rem;">
+    <div class="fr-tags-group">
+      <span class="fr-tag fr-tag--sm fr-tag--blue-ecume" style="font-size: 1rem; padding: 0.4rem 0.8rem;">
+        NeTEx ▾
+      </span>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="fr-container">
+
+      <!-- Version info bar (not a selector, just info) -->
+      <section class="wireframe-version-selector" aria-labelledby="version-info">
+        <div class="wireframe-note">
+          ⚠️ Wireframe note: Version info displayed here as context. Selector is in top bar on section pages only.
+        </div>
+
+        <div class="version-info-bar" id="version-info">
+          <span class="current-version">✓ Version actuelle : v2.4.0</span>
+          <span style="color: #696977;">Autres versions :</span>
+          <div class="other-versions">
+            <a href="#" class="version-tag old" title="Profil NeTEx v2.3">v2.3</a>
+            <a href="#" class="version-tag wip" title="Travail en cours — Profil NeTEx v2.5-wip">v2.5-wip ⚠</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page header -->
+      <section class="norm-home-header" aria-labelledby="netex-title">
+        <h1 id="netex-title">NeTEx — Profil France</h1>
+        <p>Liste des parties du profil France de la norme NeTEx (CEN/TS 16614 series) pour la description de l'offre planifiée et des infrastructures.</p>
+      </section>
+
+      <!-- Section cards -->
+      <section class="section-cards" aria-labelledby="sections-title">
+        <h2 id="sections-title">Sections du profil</h2>
+
+        <div class="cards-grid">
+          <a href="section.html?section=arrets" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Arrêts</h3>
+                <p class="fr-card__desc">Spécifications des données d'arrêts de transport — positions, équipements, correspondances.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="section.html?section=horaires" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Horaires</h3>
+                <p class="fr-card__desc">Spécifications des données d'horaires et de desserte — itinéraires, horaires planifiés.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="section.html?section=reseaux" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Réseaux</h3>
+                <p class="fr-card__desc">Spécifications des données de réseaux — lignes, sens, itinéraires, groupes de lignes.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="section.html?section=tarifs" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Tarifs</h3>
+                <p class="fr-card__desc">Spécifications des données tarifaires — zones, tarifs, offres, conditions de vente.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="section.html?section=accessibilite" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Accessibilité</h3>
+                <p class="fr-card__desc">Spécifications des données d'accessibilité — équipements, niveaux de service pour tous.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="section.html?section=parkings" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Parkings</h3>
+                <p class="fr-card__desc">Spécifications des données de parkings-relais et équipements associés.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="section.html?section=elements_communs" class="section-card fr-card fr-card--horizontal fr-card--sm">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">Éléments communs</h3>
+                <p class="fr-card__desc">Types, structures et éléments partagés entre toutes les parties du profil.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fr-footer" role="contentinfo">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand fr-enlarge-link">
+          <p class="fr-logo">République Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">transport.data.gouv.fr — Point d'accès national aux données de transport</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/dsfr.main.min.js"></script>
+</body>
+</html>

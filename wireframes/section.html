@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrêts — Wireframe: Section</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/icon/dsfr-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/main.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      padding-bottom: 4rem;
+    }
+
+    .wireframe-label {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      background: #e74c3c;
+      color: white;
+      padding: 0.25rem 1rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 0 0 0 8px;
+    }
+
+    .wireframe-note {
+      background: #fff3cd;
+      border-left: 3px solid #f0ad4e;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: #664d03;
+    }
+
+    /* ===== Desktop Layout (default, > 1200px) ===== */
+    .section-layout {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 2rem;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-area {
+      min-width: 0;
+    }
+
+    /* Version dropdown in top bar */
+    .version-dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #f0f0ff;
+      border: 1px solid #c4c4e8;
+      border-radius: 0.375rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+      color: #000091;
+      text-decoration: none;
+    }
+
+    .version-dropdown-trigger:hover {
+      background: #e0e0f8;
+    }
+
+    /* Horizontal section index */
+    .section-index-bar {
+      background: #fafafa;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 0.5rem 0;
+    }
+
+    .section-index-inner {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      overflow-x: auto;
+    }
+
+    .section-index-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      font-size: 0.875rem;
+      color: #494953;
+      white-space: nowrap;
+    }
+
+    .section-index-link:hover {
+      background: #e8e8ff;
+      color: #000091;
+    }
+
+    .section-index-link.active {
+      background: #000091;
+      color: white;
+      font-weight: 600;
+    }
+
+    .section-index-separator {
+      color: #c4c4e8;
+      margin: 0 0.1rem;
+    }
+
+    /* TOC Sidebar (desktop) */
+    .toc-sidebar {
+      position: sticky;
+      top: 6rem;
+      max-height: calc(100vh - 8rem);
+      overflow-y: auto;
+      border-left: 2px solid #e8e8e8;
+      padding-left: 1rem;
+    }
+
+    .toc-sidebar h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #696977;
+      margin-bottom: 0.75rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .toc-list a {
+      font-size: 0.85rem;
+      color: #494953;
+      text-decoration: none;
+      line-height: 1.4;
+      display: block;
+      padding: 0.15rem 0;
+    }
+
+    .toc-list a:hover {
+      color: #000091;
+    }
+
+    .toc-list li.level-2 > a {
+      padding-left: 0.75rem;
+      font-size: 0.8rem;
+      color: #696977;
+    }
+
+    /* Prev/Next footer */
+    .prev-next-nav {
+      max-width: 80rem;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e8e8e8;
+      padding-top: 1.5rem;
+    }
+
+    .prev-next-nav a {
+      text-decoration: none;
+      color: #000091;
+      font-weight: 600;
+    }
+
+    .prev-next-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .edit-link {
+      color: #494953;
+      font-size: 0.875rem;
+    }
+
+    /* ===== Mobile Layout (< 1200px) ===== */
+    @media (max-width: 1199px) {
+      .section-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc-sidebar {
+        display: none;
+      }
+
+      .mobile-section-dropdown {
+        display: block;
+      }
+
+      .desktop-only {
+        display: none !important;
+      }
+    }
+
+    /* Mobile section dropdown */
+    .mobile-section-dropdown {
+      display: none;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem;
+    }
+
+    .mobile-section-select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #c4c4e8;
+      border-radius: 0.375rem;
+      font-size: 0.9rem;
+      background: white;
+    }
+
+    /* Content styling */
+    .content-area h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content-area h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .content-area p {
+      line-height: 1.7;
+      color: #323238;
+    }
+
+    /* Version selector dropdown (simulated) */
+    .version-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .version-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1);
+      min-width: 14rem;
+      z-index: 100;
+      padding: 0.5rem 0;
+    }
+
+    .version-dropdown:hover .version-menu {
+      display: block;
+    }
+
+    .version-menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: inherit;
+      font-size: 0.875rem;
+    }
+
+    .version-menu-item:hover {
+      background: #f6f6f6;
+    }
+
+    .version-menu-item.current {
+      background: #e7f8f0;
+    }
+
+    .version-badge-sm {
+      font-size: 0.7rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 0.25rem;
+    }
+
+    .badge-current {
+      background: #e7f8f0;
+      color: #067b57;
+    }
+
+    .badge-old {
+      background: #e8f4fd;
+      color: #1212ff;
+    }
+
+    .badge-wip {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    /* Toggle button for desktop/mobile view */
+    .view-toggle {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      z-index: 1000;
+      background: #000091;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    .view-toggle:hover {
+      background: #1616a2;
+    }
+
+    /* Wireframe annotations */
+    .annotation {
+      position: relative;
+    }
+
+    .annotation::after {
+      content: attr(data-annotation);
+      position: absolute;
+      top: -0.5rem;
+      right: -0.5rem;
+      background: #e74c3c;
+      color: white;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 0.25rem;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-label">WIREFRAME: Section (Arrêts)</div>
+
+  <!-- Header -->
+  <header class="fr-header" role="banner">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">
+                  République<br>
+                  Française
+                </p>
+              </div>
+              <div class="fr-header__service">
+                <span class="fr-header__service-title">Normes des données de transport</span>
+                <p class="fr-header__service-tagline">transport.data.gouv.fr</p>
+              </div>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <!-- Norm pill -->
+                <li><a class="version-dropdown-trigger" href="#" title="Changer de norme">NeTEx ▾</a></li>
+                <!-- Version dropdown -->
+                <li class="version-dropdown">
+                  <a class="version-dropdown-trigger" href="#">
+                    <span>v2.4.0 ✓</span>
+                    <span class="fr-icon-arrow-down-s-line"></span>
+                  </a>
+                  <div class="version-menu">
+                    <a href="#" class="version-menu-item current">
+                      <span>v2.4.0 — Version actuelle</span>
+                      <span class="version-badge-sm badge-current">✓</span>
+                    </a>
+                    <a href="#" class="version-menu-item">
+                      <span>v2.3</span>
+                      <span class="version-badge-sm badge-old">Antérieure</span>
+                    </a>
+                    <a href="#" class="version-menu-item">
+                      <span>v2.5-wip</span>
+                      <span class="version-badge-sm badge-wip">⚠ WIP</span>
+                    </a>
+                  </div>
+                </li>
+                <li><a class="fr-btn fr-icon-github-line" href="#" title="GitHub">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile: Section dropdown (hidden on desktop) -->
+  <div class="mobile-section-dropdown">
+    <select class="mobile-section-select">
+      <option value="">Sections ▾</option>
+      <option value="/netex/v2.4.0/arrets/" selected>Arrêts (actuel)</option>
+      <option value="/netex/v2.4.0/horaires/">Horaires</option>
+      <option value="/netex/v2.4.0/reseaux/">Réseaux</option>
+      <option value="/netex/v2.4.0/tarifs/">Tarifs</option>
+      <option value="/netex/v2.4.0/accessibilite/">Accessibilité</option>
+      <option value="/netex/v2.4.0/parkings/">Parkings</option>
+      <option value="/netex/v2.4.0/elements_communs/">Éléments communs</option>
+    </select>
+  </div>
+
+  <!-- Horizontal Section Index (desktop only) -->
+  <nav class="section-index-bar desktop-only" aria-label="Navigation entre sections">
+    <div class="section-index-inner">
+      <a href="#" class="section-index-link active">Arrêts</a>
+      <span class="section-index-separator">·</span>
+      <a href="#" class="section-index-link">Horaires</a>
+      <span class="section-index-separator">·</span>
+      <a href="#" class="section-index-link">Réseaux</a>
+      <span class="section-index-separator">·</span>
+      <a href="#" class="section-index-link">Tarifs</a>
+      <span class="section-index-separator">·</span>
+      <a href="#" class="section-index-link">Accessibilité</a>
+      <span class="section-index-separator">·</span>
+      <a href="#" class="section-index-link">Parkings</a>
+      <span class="section-index-separator">·</span>
+      <a href="#" class="section-index-link">Éléments communs</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="fr-container">
+      <div class="section-layout">
+
+        <!-- Content Area -->
+        <div class="content-area">
+          <div class="wireframe-note" style="margin-bottom: 1.5rem;">
+            ⚠️ Wireframe note: Full section content from NeTEx profil France. Text is truncated for brevity — the actual page contains ~5300+ lines of normative content.
+          </div>
+
+          <h1 id="arrets">Arrêts</h1>
+
+          <!-- Desktop TOC (right sidebar) -->
+          <details class="fr-accordion desktop-only" style="margin-bottom: 2rem;">
+            <summary class="fr-accordion__title">
+              <span class="fr-icon-article-line fr-accordion__icon" aria-hidden="true"></span>
+              Table des matières
+            </summary>
+            <div class="fr-accordion__content">
+              <ul style="padding-left: 1.5rem; margin-bottom: 0;">
+                <li><a href="#avant-propos">Avant-propos</a></li>
+                <li><a href="#champ-arrettype">Champ ArretType</a></li>
+                <li><a href="#champ-quipementarrettype">Champ ÉquipementArretType</a></li>
+                <li><a href="#champ-zoneaccessibilitearrettype">Zone d'accessibilité</a></li>
+                <li><a href="#references">Références</a></li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Mobile TOC (inline collapsible) -->
+          <details class="fr-accordion mobile-only" style="margin-bottom: 2rem;">
+            <summary class="fr-accordion__title">
+              <span class="fr-icon-article-line fr-accordion__icon" aria-hidden="true"></span>
+              Table des matières
+            </summary>
+            <div class="fr-accordion__content">
+              <ul style="padding-left: 1.5rem; margin-bottom: 0;">
+                <li><a href="#avant-propos">Avant-propos</a></li>
+                <li><a href="#champ-arrettype">Champ ArretType</a></li>
+                <li><a href="#champ-quipementarrettype">Champ ÉquipementArretType</a></li>
+                <li><a href="#champ-zoneaccessibilitearrettype">Zone d'accessibilité</a></li>
+                <li><a href="#references">Références</a></li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Section content (truncated for wireframe) -->
+          <h2 id="avant-propos">Avant-propos</h2>
+          <p>Le présent document décrit le profil France de NeTEx relatif aux données d'arrêts. Il définit les champs et contraintes applicables à la description des points d'arrêt du réseau de transport.</p>
+          <p>L'harmonisation des pratiques dans l'échange des données relatives aux offres de transport est essentielle :</p>
+          <ul>
+            <li>Pour l'usager, aux fins d'une présentation homogène et compréhensible de l'offre de transport ;</li>
+            <li>Pour les autorités organisatrices, de manière à fédérer des informations homogènes venant de chacun des opérateurs ;</li>
+            <li>Pour les opérateurs, qui pourront utiliser ce format d'échange pour leurs systèmes d'information voyageur.</li>
+          </ul>
+
+          <h2 id="champ-arrettype">Champ ArretType</h2>
+          <p>Le type <code>ArretType</code> définit un point d'arrêt de transport en commun. Il contient les informations suivantes :</p>
+
+          <table class="fr-table">
+            <caption>Éléments du type ArretType</caption>
+            <thead>
+              <tr>
+                <th scope="col">Champ</th>
+                <th scope="col">Type</th>
+                <th scope="col">Occurrence</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>id</code></td>
+                <td><code>ResourceIdType</code></td>
+                <td>1..1</td>
+                <td>Identifiant unique de l'arrêt</td>
+              </tr>
+              <tr>
+                <td><code>name</code></td>
+                <td><code>TextParameterType</code></td>
+                <td>1..1</td>
+                <td>Nom commercial de l'arrêt</td>
+              </tr>
+              <tr>
+                <td><code>publicCode</code></td>
+                <td><code>TextParameterType</code></td>
+                <td>0..1</td>
+                <td>Code public d'identification (ex: nom de station)</td>
+              </tr>
+              <tr>
+                <td><code>centralName</code></td>
+                <td><code>SiteRef</code></td>
+                <td>1..1</td>
+                <td>Référence au site d'arrêt central</td>
+              </tr>
+              <tr>
+                <td><code>accessibilityAssessment</code></td>
+                <td><code>AccessibilityAssessmentStructure</code></td>
+                <td>0..1</td>
+                <td>Évaluation de l'accessibilité du point d'arrêt</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="champ-quipementarrettype">Champ ÉquipementArretType</h2>
+          <p>Définit les équipements disponibles à un point d'arrêt (abribus, horodateur, éclairage, etc.).</p>
+
+          <h2 id="references">Références</h2>
+          <ul>
+            <li><a href="#">NeTEx CEN/TS 16614 — Part 1: Core concepts</a></li>
+            <li><a href="#">NeTEx CEN/TS 16614 — Part 2: Common data structures</a></li>
+          </ul>
+
+          <!-- Prev/Next Navigation -->
+          <nav class="prev-next-nav" aria-label="Navigation entre sections">
+            <a href="#" class="fr-btn fr-btn--sm">← Éléments communs</a>
+            <span style="color: #696977; font-size: 0.875rem;">v2.4.0 — Profil NeTEx France</span>
+            <a href="#" class="fr-btn fr-btn--sm">Horaires →</a>
+          </nav>
+
+          <!-- Edit Link (only for current official and WIP versions) -->
+          <div style="margin-top: 1rem;">
+            <a href="#" class="edit-link fr-icon-edit-line" style="text-decoration: none; color: #000091;">
+              Proposer une modification →
+            </a>
+          </div>
+        </div>
+
+        <!-- TOC Sidebar (desktop only) -->
+        <aside class="toc-sidebar desktop-only" aria-label="Table des matières">
+          <h3>Table des matières</h3>
+          <ul class="toc-list">
+            <li><a href="#avant-propos">Avant-propos</a></li>
+            <li><a href="#champ-arrettype">Champ ArretType</a></li>
+            <li class="level-2"><a href="#id">id</a></li>
+            <li class="level-2"><a href="#name">name</a></li>
+            <li class="level-2"><a href="#publiccode">publicCode</a></li>
+            <li class="level-2"><a href="#centralname">centralName</a></li>
+            <li class="level-2"><a href="#accessibilityassessment">accessibilityAssessment</a></li>
+            <li><a href="#champ-quipementarrettype">Champ ÉquipementArretType</a></li>
+            <li><a href="#champ-zoneaccessibilitearrettype">Zone d'accessibilité</a></li>
+            <li><a href="#references">Références</a></li>
+          </ul>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fr-footer" role="contentinfo">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand fr-enlarge-link">
+          <p class="fr-logo">République Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">transport.data.gouv.fr — Point d'accès national aux données de transport</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- View toggle button (for wireframe purposes only) -->
+  <button class="view-toggle" onclick="toggleView()">
+    📱 Basculer vue: Desktop / Mobile
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.0/dist/dsfr.main.min.js"></script>
+  <script>
+    // Wireframe-only: toggle between desktop and mobile views
+    let isMobile = false;
+
+    function toggleView() {
+      isMobile = !isMobile;
+      const desktopElements = document.querySelectorAll('.desktop-only');
+      const mobileElements = document.querySelectorAll('.mobile-only');
+
+      if (isMobile) {
+        desktopElements.forEach(el => el.style.display = 'none');
+        mobileElements.forEach(el => el.style.display = '');
+        document.querySelector('.view-toggle').textContent = '🖥️ Basculer vue: Mobile / Desktop';
+      } else {
+        desktopElements.forEach(el => el.style.display = '');
+        mobileElements.forEach(el => el.style.display = 'none');
+        document.querySelector('.view-toggle').textContent = '📱 Basculer vue: Desktop / Mobile';
+      }
+    }
+
+    // Initialize mobile view as hidden
+    document.querySelectorAll('.mobile-only').forEach(el => el.style.display = 'none');
+  </script>
+</body>
+</html>
