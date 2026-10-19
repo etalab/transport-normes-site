@@ -27,3 +27,7 @@ Remarque : Ce document étant un profil d’échange de NeTEx, il ne se substitu
 - [Accessibilité]() : données d'accessibilité : équipements, niveaux de services et cheminements piétons
 - [Tarifs]() : données tarifaires : zones, prix, offres, conditions de vente
 - [Parkings]() : données de stationnement
+
+## Ressources additionnelles
+
+- [Exemples]() : quelques exemples de petits fichiers NeTEx à vocation pédagogique

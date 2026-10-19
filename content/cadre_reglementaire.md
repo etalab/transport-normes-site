@@ -15,8 +15,6 @@ Ces données doivent être publiées sur le Point d'accès national transport.da
 
 Ce site référence les spécifications des versions officielles et en vigueur des profils français des normes européennes, conformément à l'[arrêté du 4 mars 2022](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045382208) relatif aux spécifications techniques pour la mise à disposition des données concernant les déplacements et la circulation.
 
-[Consulter la documentation du Point d'accès national sur le cadre réglementaire](https://doc.transport.data.gouv.fr/le-point-d-acces-national/cadre-juridique).
-
 Remarque : pour certains types de données, d'autres formats d'échange peuvent être utilisés, tels que DATEX II pour les données routières ou certains [schémas réglementaires](https://schema.data.gouv.fr/) pour les aménagements cyclables, les infrastructures de recharge pour les véhicules électriques.
 
 ## Textes réglementaires
@@ -32,4 +30,4 @@ L'[arrêté du 28 mai 2024](https://www.legifrance.gouv.fr/loda/id/LEGITEXT00004
 
 ## Ressources complémentaires
 
-webinaires sur le cadre réglementaire ?
+[Consulter la documentation du Point d'accès national sur le cadre réglementaire](https://doc.transport.data.gouv.fr/le-point-d-acces-national/cadre-juridique).

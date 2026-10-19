@@ -6,7 +6,7 @@ summary: "comprendre NeTEx"
 
 **NeTEx** (Network Timetable Exchange) est un format d'échange permettant de décrire les données théoriques planifiées d'une offre de transport public. C'est une norme, publiée par le CEN (comité européen de normalisation) sous la référence [NeTEx CEN/TS 16614](https://transmodel-cen.eu/index.php/netex/).
 
-La spécification de NeTEx se décompose en six parties:
+La spécification de NeTEx se décompose en six parties :
 
 - Partie 1 : topologie des réseaux (les réseaux, les lignes, les parcours commerciaux les missions commerciales, les arrêts et lieux d’arrêts, les correspondances et les éléments géographiques en se limitant au strict minimum pour l’information voyageur) - référence CEN/TS 16614-1:2014
 - Partie 2 : horaires théoriques (les courses commerciales, les heures de passage graphiquées, les jours types associés ainsi que les versions des horaires) - référence CEN/TS 16614-2:2014
