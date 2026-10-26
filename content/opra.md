@@ -4,7 +4,7 @@ layout: "miscellaneous"
 summary: "comprendre OpRa"
 ---
 
-**OpRa** (Operating raw data) est un format d'échange permettant de décrire les données opérationnelles historisées et statistiques d'une offre de transport public. C'est une norme, publiée par le CEN (comité européen de normalisation) sous la référence [CEN/TS 17370](https://transmodel-cen.eu/index.php/opra/).
+**OpRa** (<span lang="en">Operating raw data</span>) est un format d'échange permettant de décrire les données opérationnelles historisées et statistiques d'une offre de transport public. C'est une norme, publiée par le CEN (comité européen de normalisation) sous la référence [CEN/TS 17370](https://transmodel-cen.eu/index.php/opra/).
 
 En complément des documents de spécification technique, OpRa fournit également un schéma W3C XML (XSD) qui peut être utilisé directement par les logiciels produisant, validant et utilisant les données. Ce schéma est disponible sur [l'espace de travail Github](https://github.com/TransmodelEcosystem/OpRa) du projet, géré par le CEN.
 

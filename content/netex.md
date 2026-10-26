@@ -4,7 +4,7 @@ layout: "miscellaneous"
 summary: "comprendre NeTEx"
 ---
 
-**NeTEx** (Network Timetable Exchange) est un format d'échange permettant de décrire les données théoriques planifiées d'une offre de transport public. C'est une norme, publiée par le CEN (comité européen de normalisation) sous la référence [NeTEx CEN/TS 16614](https://transmodel-cen.eu/index.php/netex/).
+**NeTEx** (<span lang="en">Network Timetable Exchange</span>) est un format d'échange permettant de décrire les données théoriques planifiées d'une offre de transport public. C'est une norme, publiée par le CEN (comité européen de normalisation) sous la référence [NeTEx CEN/TS 16614](https://transmodel-cen.eu/index.php/netex/).
 
 La spécification de NeTEx se décompose en six parties :
 
