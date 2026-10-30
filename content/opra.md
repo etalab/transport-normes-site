@@ -16,22 +16,33 @@ Il n'existe pas à ce jour de profil France pour OpRa.
 
 La norme européenne peut cependant déjà être utilisée pour exporter des données opérationnelles dans le contexte français.
 
-Que peut-on représenter avec OpRa ?
+## Questions fréquentes
+
+<details>
+<summary>Que peut-on représenter avec OpRa ?</summary>
 
 OpRa permet de décrire la réalité observée de l'exploitation, comme les retards ou les annulations de trajets.
 
 OpRa permet de représenter les données soit sous la forme de mesures individuelles sur un intervalle donné, soit de manière agrégée sous la forme de statistiques.
 
-Suis-je obligé(e) d'utiliser OpRa ?
+</details>
+<details>
+<summary>Suis-je obligé(e) d'utiliser OpRa ?</summary>
 
 En savoir plus sur [le cadre réglementaire]() entourant la publication des jeux de données de mobilité.
 
-Je n'y comprends rien, qui peut m'aider ?
+</details>
+<details>
+<summary>Je n'y comprends rien, qui peut m'aider ?</summary>
 
 Si vous avez des questions ou souhaitez être accompagnés, vous pouvez vous rapprocher du [GT7]().
 
-Mon besoin n'est pas couvert, que puis-je faire ?
+</details>
+<details>
+<summary>Mon besoin n'est pas couvert, que puis-je faire ?</summary>
 
 OpRa est un format d'échange récent et vivant, qui évolue avec les besoins métiers des acteurs qui l'utilisent.
 
 En savoir plus sur [la communauté et la gouvernance]() de l'écosystème Transmodel.
+
+</details>

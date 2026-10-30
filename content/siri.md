@@ -35,11 +35,14 @@ Vous pouvez également consulter :
 
 ## Questions fréquentes
 
-Où trouver des données SIRI couvrant le territoire français ?
+<details>
+<summary> Où trouver des données SIRI couvrant le territoire français ?</summary>
 
 De nombreux acteurs français publient leurs données dynamiques au format SIRI. Vous pouvez les retrouver sur le [Point d'Accès National](https://transport.data.gouv.fr/datasets?format=SIRI) en effectuant une recherche par format.
 
-Que peut-on représenter avec SIRI ?
+</details>
+<details>
+<summary>Que peut-on représenter avec SIRI ?</summary>
 
 SIRI peut être notamment utilisé pour :
 
@@ -49,22 +52,32 @@ SIRI peut être notamment utilisé pour :
 - Fournir des informations en temps réel sur la progression de chaque véhicule
 - Gérer la synchronisation des correspondances garanties entre plusieurs réseaux
 
-Quelle est la différence avec GTFS-RT ?
+</details>
+<details>
+<summary>Quelle est la différence avec GTFS-RT ?</summary>
 
 GTFS-RT est également un standard pour publier des informations de transport en temps réel.
 
 TODO
 
-Suis-je obligé(e) d'utiliser SIRI ?
+</details>
+<details>
+<summary>Suis-je obligé(e) d'utiliser SIRI ?</summary>
 
 En savoir plus sur [le cadre réglementaire]() entourant la publication des jeux de données de mobilité.
 
-Je n'y comprends rien, qui peut m'aider ?
+</details>
+<details>
+<summary>Je n'y comprends rien, qui peut m'aider ?</summary>
 
 Si vous avez des questions ou souhaitez être accompagnés, vous pouvez vous rapprocher du [GT7]() ou poser des questions sur l'[espace de travail du GT7 sur Github](https://github.com/etalab/transport-profil-siri-fr).
 
-Mon besoin n'est pas couvert, que puis-je faire ?
+</details>
+<details>
+<summary>Mon besoin n'est pas couvert, que puis-je faire ?</summary>
 
 SIRI est un format d'échange vivant, qui évolue avec les besoins métiers des acteurs qui l'utilisent.
 
 En savoir plus sur [la communauté et la gouvernance]() de SIRI.
+
+</details>

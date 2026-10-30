@@ -44,11 +44,14 @@ Pour faire vos premiers pas avec NeTEx, vous pouvez consulter l'enregistrement d
 
 ## Questions fréquentes
 
-Où trouver des données NeTEx couvrant le territoire français ?
+<details>
+<summary>Où trouver des données NeTEx couvrant le territoire français ?</summary>
 
 De nombreux acteurs français publient leurs données au format NeTEx. Vous pouvez les retrouver sur le [Point d'Accès National](https://transport.data.gouv.fr/datasets?format=NeTEx) en effectuant une recherche par format.
 
-Que peut-on représenter avec NeTEx ?
+</details>
+<details>
+<summary>Que peut-on représenter avec NeTEx ?</summary>
 
 NeTEx a pour objectif de couvrir toute l'information utile pour préparer un trajet. Ce comprend notamment
 
@@ -62,7 +65,9 @@ NeTEx a pour objectif de couvrir toute l'information utile pour préparer un tra
 - des données d'ordre opérationnelle (non utiles directement pour l'information voyageur)
 - des informations sur les services réguliers, mais aussi les services à la demande ou les modes plus individuels tels que le covoiturage ou les véhicules en libre service
 
-Quelle est la différence avec GTFS ?
+</details>
+<details>
+<summary>Quelle est la différence avec GTFS ?</summary>
 
 GTFS est également un standard pour publier des informations de transport.
 
@@ -76,22 +81,32 @@ Voici quelques autres différences :
 
 GTFS n'est pas basé sur le modèle conceptuel de Transmodel, bien qu'il soit possible de réaliser des correspondances entre la plupart des concepts et attributs, et donc des conversions.
 
-Comment valider un jeu de données NeTEx ?
+</details>
+<details>
+<summary>Comment valider un jeu de données NeTEx ?</summary>
 
 Le Point d'Accès National met à disposition divers [outils de validation](https://transport.data.gouv.fr/validation) dont un validateur NeTEx.
 
 Il est également recommandé de valider les fichiers en utilisant la XSD de NeTEx pour s'assurer de la conformité du format (mais il n'existe cependant pas de XSD couvrant les spécificités métier du profil français).
 
-Suis-je obligé(e) d'utiliser NeTEx ?
+</details>
+<details>
+<summary>Suis-je obligé(e) d'utiliser NeTEx ?</summary>
 
 En savoir plus sur [le cadre réglementaire]() entourant la publication des jeux de données de mobilité.
 
-Je n'y comprends rien, qui peut m'aider ?
+</details>
+<details>
+<summary>Je n'y comprends rien, qui peut m'aider ?</summary>
 
 La section "Ressources additionnelles" de cette page indique quelques documents didactiques qui vous permettront de comprendre les bases pour prendre en main le format. Puis, si vous avez des questions ou souhaitez être accompagnés, vous pouvez vous rapprocher du [GT7]().
 
-Mon besoin n'est pas couvert, que puis-je faire ?
+</details>
+<details>
+<summary>Mon besoin n'est pas couvert, que puis-je faire ?</summary>
 
 NeTEx est un format d'échange vivant, qui évolue avec les besoins métiers des acteurs qui l'utilisent.
 
 En savoir plus sur [la communauté et la gouvernance]() de NeTEx.
+
+</details>
