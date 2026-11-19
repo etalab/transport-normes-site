@@ -36,3 +36,4 @@ Remarque : Ce document étant un profil d’échange de NeTEx, il ne se substitu
 ## Ressources additionnelles
 
 - [Exemples]() : quelques exemples de petits fichiers NeTEx à vocation pédagogique
+- [FÀQ tarifaire]() : foire aux questions sur la partie tarifaire du profil
